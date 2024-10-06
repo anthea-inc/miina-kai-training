@@ -1,0 +1,77 @@
+### 課題１
+
+- コンテナ仮想化技術が登場する以前は、どのような課題があったのでしょうか。
+それらの課題に対して、Dockerはどのようなアプローチで解決を図ったのか、自分の言葉でまとめてみましょう。
+
+
+- 従来の仮想化技術とDockerの違いについて調べ、それぞれの特徴を比較してください。その上で、Dockerの利点は何だと考えますか。
+
+
+- 実際の開発現場や運用現場でDockerがどのように活用されているのか、事例を調査してください。調査した事例から、Dockerの活用方法や導入効果について学んだことを共有しましょう。
+
+
+
+### 課題２
+
+- `Dockerコンテナ`を実行するための環境である`Dockerホスト`について、その役割を説明してください。
+    - また、Dockerホストとコンテナはどのように関係しているのでしょうか？
+
+
+- `Docker Engine`の主要な機能である`Dockerクライアント`と`Docker デーモン`はそれぞれどのような役割を持っているのでしょうか？
+    - 両者はどのように連携して、Dockerコンテナを管理・操作しているのでしょうか？
+
+
+
+### 課題３
+
+- Dockerにおける`ネームスペース(Namespace)`/`コントロールグループ(cgroup)`/`ユニオンファイルシステム(UnionFS)`の役割について教えてください。
+
+
+
+### 課題４
+
+- Dockerコンテナとはどのようなものか、簡潔に説明してください。
+- Dockerイメージについて説明してください。
+    - また、Dockerイメージを使用することで、どのようなメリットがあるのか、具体例を交えて説明してください。
+
+
+- Dockerレジストリとは何か、そしてDockerリポジトリとの関係について説明してください。
+    - また、広く利用されているパブリックレジストリを1つ挙げてください。
+
+
+- Dockerfileの役割について説明してください。
+    - Dockerfileを使ってイメージを構築することで、どのような利点があるでしょうか。
+
+
+
+### 課題５
+
+以下のDockerコマンドについて、それぞれの使用目的を説明してください。
+
+
+- docker container run
+- docker container ls
+- docker container start
+- docker container stop
+- docker container rm
+- docker image
+- docker pull
+- docker push
+- docker build
+- docker exec
+- docker logs
+
+### 課題６
+
+docker container runのオプションについて、それぞれの使用目的を説明してください。
+
+
+- --detach , -d
+- --env , -e
+- --volume , -v
+- --publish , -p
+- --interactive , -i
+- --tty , -t
+- --name
+- --restart
+- --rm
