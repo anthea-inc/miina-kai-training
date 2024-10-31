@@ -274,3 +274,4 @@ find /home/myapp -name "*index*.html" -or -name "*index*.css" -type f
 
 
 find ./ -type f -name "*.txt" -name "*miina*" -delete
+.txtかつmiinaが入っているファイルを検索して一気に削除する
