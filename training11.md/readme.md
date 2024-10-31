@@ -41,7 +41,7 @@ GUI：マウスやタッチパネルを使用し操作
 欠点：作業の手順を記録、共有しづらい・複雑な処理ができない
 
 - シェルがLinuxシステムでどのような役割を果たしているかを説明してください。
-⭐︎あとで解く
+システムにおいてユーザーとOSをつなぐインターフェースとしての役割を果たしています
 
 ### 課題２
 
@@ -113,8 +113,8 @@ var：サイズが変化するファイルを置くディレクトリ
 
 Linuxの基本コマンドについて学びましょう。以下の各コマンドがどのような目的で使われるのかを説明してください。
 
-- pwd：現在のディレクトリの表示
-- cd：現在のディレクトリの変更
+- pwd：現在自分がいる作業ディレクトリの表示
+- cd：ディレクトリ間を移動する際に使用
 - ls：ファイル・ディレクトリの一覧の表示
 - mkdir：ディレクトリの作成
 - touch：引数で渡された名前のファイルが存在しなかった場合には、空ファイルを作成し、存在した場合には、そのファイルやディレクトリの更新日時を更新
@@ -129,3 +129,146 @@ Linuxの基本コマンドについて学びましょう。以下の各コマン
 - locate：ファイル名やディレクトリ名を指定してファイルを検索
 - man：コマンドの使い方に関するマニュアルを表示
 - which：指定したコマンドのパスを表示
+
+
+### 任意課題
+
+- ls コマンドのオプション
+よく使う
+-l　ファイルの詳細情報を表示する
+-a　隠しファイルも含めた全てのファイルを表示する
+-F　ファイル種別を表示する
+    - パス名展開
+
+        - アスタリスクとクエスチョン
+        ＊長さ0以上の文字列にマッチします。
+        ？任意の一文字にマッチします。
+
+    - ls 
+    lsはディレクトリ内のファイル、フォルダの一覧表示
+    - la
+    lオプションは詳細表示　aオプションは全て表示
+    合わせると全ての詳細表示表示
+
+- 特定のディレクトリ内で拡張子が.htmlのファイルをまとめて削除する方法を調べ、実行してください。
+test.html miina.html kai.htmlを使用
+
+rm *.html
+find ./ -type f -name "*.html" -delete
+
+- catコマンドを使って行番号を表示する方法を教えてください。
+- cat　-nをつけると表示できます
+
+
+
+
+確認用
+
+### 実践課題１
+
+- ホームディレクトリに移動し、`project`ディレクトリを作成してください。
+cd /home
+mkdir project
+
+- `project`ディレクトリの中に、`src/main/js`と`src/test/js`の2つのディレクトリを同時に作成する方法を調べ、実行してください。
+mkdir -p src/main/js src/test/js
+
+- `project/src/main/js`ディレクトリに移動し、カレントディレクトリを確認してください。
+cd移動　ls確認
+
+- `src/main/js`に`main.js`と`utils.js`という2つの空ファイルを作成する方法を調べ、実行してください。
+touch main.js utils.js
+
+- `utils.js`を`helper.js`という名前でコピーしてください。
+cp utils.js ../main/helpre.js
+
+
+- `project/src/test/js`に`test-main.js`/`test-utils.js`/`test-helper.js`の3つの空ファイルを一度に作成する方法を調べ、実行してください。
+ touch test-main.js test-utils.js test-helper.js
+
+    - 作成した`test-utils.js`を削除してください。
+rm test-utils.js
+
+    - 拡張子が.jsのファイルをまとめて削除する方法を調べ、実行してください。
+find ./ -type f -name "*.js" -delete
+
+- `project/src`ディレクトリに移動し、`test`ディレクトリを削除してください。
+cd移動　 rm test
+
+ - ホームディレクトリに移動し、ディレクトリを削除する別の方法を調べ、`project`ディレクトリをまとめて削除してください。
+ rm -r project
+
+
+
+### 課題２
+- ホームディレクトリで`texts`ディレクトリを作成し、その中に移動してください。
+mkdir texts
+
+- `sample.txt`を作成し、以下の内容を書き込む方法を調べ、実行してください。
+
+    This is the first line.
+    This is the second line.
+    This is the third line.
+    This is the fourth line.
+    This is the fifth line.
+
+![alt text](image.png)
+
+入力：echo "This is the・・・"  sample.txt
+内容表示：cat sample.txt 
+
+### 課題３
+
+- `texts`ディレクトリの中に、`documents`ディレクトリを作成してください。
+textsにcd：　 mkdir documents  
+
+- `sample.txt`を`documents`ディレクトリに移動させてください。
+mv sample.txt documents
+
+- `documents`ディレクトリの名前を`docs`に変更してください。
+mv documents docs
+
+- `docs`ディレクトリをホームディレクトリに移動させてください。
+mv docs /home
+/をつけなかったら名前変更になった
+
+- ホームディレクトリにある`docs`ディレクトリを、`texts`ディレクトリの中に移動させてください。
+mv docs texts
+
+### 課題４
+
+- `texts`ディレクトリの中に、`symlinks`ディレクトリを作成し、その中に移動してください。
+mkdir symlinks 
+
+- `../docs/sample.txt`を指すシンボリックリンク`sample_link`を作成してください。
+ln -s /home/texts/docs/sample.txt sample_link    
+
+- `sample_link`の内容を表示し、`sample.txt`の内容と同じであることを確認してください。
+cat sample_link
+
+- `sample_link`を削除してください。
+rm sample_link
+
+###
+
+課題５
+拡張子が.htmlのファイルを検索し、そのファイル名を表示する。
+find /home/myapp -name "*.html"  -type f
+
+- ファイル名に`test`を含むファイルを検索し、そのファイル名を表示する。
+find /home/myapp -name "*test*" -type f
+
+ディレクトリ名にmainを含むディレクトリを検索し、そのディレクトリ名を表示する。
+ find /home/myapp -name "*main*" -type d
+
+ファイル名がindex.htmlまたはstyle.cssのファイルを検索し、そのファイル名を表示する。
+find /home/myapp -name "index.html" -or -name "style.css" -type f
+
+ファイル名にscriptを含み、かつ拡張子が.jsのファイルを検索し、そのファイル名を表示する。
+find /home/myapp -name "*script*" -name "*.js" -type f
+
+ファイル名にindexを含み、かつ拡張子が.htmlまたは.cssのファイルを検索し、そのファイル名を表示する。(indexでcssのファイルがなかったため確認できていないが、合っていると思う)
+find /home/myapp -name "*index*.html" -or -name "*index*.css" -type f
+
+※追記/home/myappの指定なくても大丈そう！
+
