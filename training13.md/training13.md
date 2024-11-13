@@ -17,7 +17,8 @@ alias ll='ls -al'
 現在使用しているシェルの内部だけで有効な変数。
 
     - シェル変数の定義と参照方法を、具体的な例を用いて説明してください。
-＝⭐️
+変数名=値
+
 
 環境変数とは何か、その役割と重要性について説明してください。
 ：別のシェルを起動したり、コマンドを実行した場合にも使用できる変数。
@@ -31,9 +32,9 @@ bash_profile：profileと同じに使えるが、bashのみで有効
 bashrc：bashでしか使わないものを記述する
 
     - 設定をどのファイルに書くべきか、状況に応じた適切な選択について説明してください。
-profile：⭐️
-bash_profile：
-bashrc：
+profile：環境変数など
+bash_profile：ログイン時に一度だけ実行する環境変数の設定
+bashrc：エイリアス、シェルオプション、プロンプト設定
 
  `source`コマンドの使い方とその目的について説明してください。
 ファイルに書かれたコマンドを現在のシェルで実行する
@@ -46,16 +47,30 @@ bashrc：
 
 
     - 標準入力のリダイレクト`<`を使用して、コマンドにファイルの内容を入力として渡す方法を調査し、実際に試してください。
+    command < file
+
 
     - 標準出力のリダイレクト`>`を使用して、コマンドの出力をファイルに保存する方法を調査し、実際に試してください。
+    command > file
+
 
     - 標準エラー出力のリダイレクト`2>`を使用して、エラー出力をファイルに保存する方法を調査し、実際に試してください。
+    command 2> file
+
 
     - 標準出力と標準エラー出力の両方をまとめてリダイレクト`2>&1`を使用して、出力とエラーを一つのファイルに保存する方法を調査し、実際に試してください。
+　command 2>&1
 
-        - `2>&1`の役割と意味について詳しく説明してください。
+https://qiita.com/IY_LNX/items/ef7a1158f6084bea1bac#:~:text=2%3E%261%E3%81%AF%E3%80%81%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%BF,%E3%81%AB%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E3%81%AE%E3%81%A7%E3%81%99%E3%80%82
 
 
+ - `2>&1`の役割と意味について詳しく説明してください。
+ファイルディスクリプタ２番（標準エラー出力）をファイルディスクリプタ１番（標準出力）と同じものにする際に使います
+これを書いていないと、番号の省略は標準出力の意味になるため、 標準出力のみ log.txt に保存され、標準エラー出力は画面に出力されます。
+
+
+
+![alt text](image.png)
 - リダイレクトの`>`と`>>`の違いを説明してください。
 
 >ファイルへの上書き
@@ -78,15 +93,64 @@ sort： 昇順/降順に表示する：sort -r file
 uniq： 重複する行を1行にして表示する ：uniq -c uniq
 
 
+
+
 ### 2
 - 新しいシェル変数`MY_VAR`を作成し、その値を`Hello World`に設定してください。
 touch MY_VAR 
 MY_VAR="Hello World"
 
+別シェルSHELL="hello"
+
 - シェル変数が正しく設定されているか確認するために、`echo`コマンドで`MY_VAR`の値を表示してください。
-echo MY_VAR  
+echo $MY_VAR
 
 - 作成した`MY_VAR`を環境変数として登録し、別のシェルからもその値が参照できるか確認してください。
 
 - システムが起動した時に自動的に環境変数が設定されるように、`.bash_profile`や`.bashrc`ファイルに設定を追加してください。
 - 変更した設定を即座に適用するために、`source`コマンドを使って確認してみましょう。
+
+
+
+### 3
+- `input.txt`ファイルの内容を標準入力として渡し、`wc -l`コマンドを使って行数を数えてみましょう。
+
+echo "That Arizona sky burning in your eyes
+You look at me and, babe, I wanna catch on fire
+It's buried in my soul like California gold
+You found the light in me that I couldn't find" > input.txt
+
+wc -l input.txt
+結果：4 input.txt
+    - `wc -l`コマンドの実行結果を`output.txt`ファイルに保存しましょう。
+wc -l input.txt > output.txt
+確認：cat output.txt
+
+- エラー出力も別のファイルに保存する方法を試してください。
+
+dir 2> input.txt
+MY_VAR	       boot  input.txt	opt	    run   test.txt
+SHELL	       dev   lib	output.txt  sbin  tmp
+Test.--------  etc   media	proc	    srv   usr
+bin	       home  mnt	root	    sys   var
+
+
+    - 例として、`error.txt`ファイルにエラー出力をリダイレクトして保存してください。
+dir 2> input.txt
+
+- 存在しないファイルを表示しようとしてエラーを発生させ、エラーメッセージが正しく`error_log.txt` に保存されるか確認しましょう。
+cat sonzaisinai-file.txt 2> error_log.txt
+
+- `echo "Hello"`と`echo "World"`をそれぞれ`test.txt`に書き込むコマンドを実行してください。
+echo "Hello" > test.txt
+echo "World" >> test.txt
+
+    - `>`を使った場合と`>>`を使った場合で、ファイルの内容がどう変わるかを確認しましょう。
+    
+- `ps aux`コマンドの出力結果をフィルタリングして、特定のプロセス名を抽出してみましょう。
+ps aux | grep 286 
+
+
+ce
+ls -la
+export less="環境"
