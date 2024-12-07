@@ -65,14 +65,17 @@ color: red;
 .green {
 color: green;
 }
-
+.blue {
+background: rgb(149, 149, 255);
+}
 < /style>
 
 余白の指定はそのままで文字色だけを変えたい場合
 空白指定した class と変えたい色の class を合わせて指定する。
 
 < p class="abc red">赤色表示< /p>
-< p class="abc green">緑色表示< /p>
+< p class="abc green blue">緑色表示< /p>
 このようなコードを組むと、その 2 つが使用され、余白はそのままで文字の色が変わる。
+指定制限はないが実用的な考慮で
 
 問題の趣旨とずれていたらすみません！
