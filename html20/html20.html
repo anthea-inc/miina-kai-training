@@ -4,5 +4,58 @@
     <title>フォーム要素を学ぼう！</title>
     <meta charset="UTF-8" />
   </head>
-  <body></body>
+  <body>
+    <form>
+      <fieldset>
+        <legend>名前入力</legend>
+        <label>
+          ニックネーム
+          <input type="text" name="name" />
+        </label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>住まいの選択</legend>
+        <select name="prefecture">
+          <option value="">お住まいの国を選んでください</option>
+          <option value="アメリカ">アメリカ</option>
+          <option value="イギリス">イギリス</option>
+          <option value="ドイツ">ドイツ</option>
+          <option value="日本">日本</option>
+        </select>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>お問い合わせ</legend>
+        <label for="message">メッセージ:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          cols="30"
+          placeholder="ここに入力してください..."
+        ></textarea
+        ><br />
+        <button type="submit">送信</button>
+      </fieldset>
+
+      <input type="text" list="keywords" />
+      <datalist id="keywords">
+        <optgroup label="北側">
+          <option value="北海道">北海道</option>
+          <option value="青森">青森</option>
+          <option value="秋田">秋田</option>
+        </optgroup>
+      </datalist>
+
+      <br />
+      <br />
+
+      <form oninput="add.value = Number(one.value) + Number(two.value);">
+        <input type="number" name="one" value="0" size="10" /> ＋
+        <input type="number" name="two" value="0" size="10" /> ＝
+        <output name="add" for="one two">0</output>
+      </form>
+      <p>サイト参照</p>
+    </form>
+  </body>
 </html>
