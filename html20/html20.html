@@ -50,12 +50,27 @@
       <br />
       <br />
 
-      <form oninput="add.value = Number(one.value) + Number(two.value);">
-        <input type="number" name="one" value="0" size="10" /> ＋
-        <input type="number" name="two" value="0" size="10" /> ＝
-        <output name="add" for="one two">0</output>
-      </form>
-      <p>サイト参照</p>
+      <label for="num1">数値1:</label>
+      <input
+        type="number"
+        id="num1"
+        name="num1"
+        value="0"
+        oninput="sum.value = Number(num1.value) + Number(num2.value)"
+      /><br /><br />
+
+      <label for="num2">数値2:</label>
+      <input
+        type="number"
+        id="num2"
+        name="num2"
+        value="0"
+        oninput="sum.value = Number(num1.value) + Number(num2.value)"
+      /><br /><br />
+
+      <label for="sum">合計:</label>
+      <output id="sum" name="sum">0</output>
+      <p>計算式はサイト参照です</p>
     </form>
   </body>
 </html>
