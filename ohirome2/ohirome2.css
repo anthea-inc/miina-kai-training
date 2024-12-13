@@ -1,0 +1,31 @@
+table {
+  background-color: #313131;
+  color: white;
+  width: 100%;
+  border-collapse: collapse;
+}
+body {
+  margin: 0; /* ページ全体の余白を削除 */
+  padding: 0;
+  background-image: url("back.jpeg"); /* 背景画像 */
+  background-size: cover; /* 画面いっぱいに背景を拡大 */
+  background-repeat: no-repeat; /* 背景画像を繰り返さない */
+  background-attachment: fixed; /* 背景画像を固定 */
+  background-position: center; /* 背景画像を中央に配置 */
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+p {
+  color: white;
+  background-color: rgba(7, 11, 41, 0.7);
+  width: 700px;
+}
+
+.red {
+  background-color: rgba(255, 185, 185, 0.5);
+  height: 50px;
+}
