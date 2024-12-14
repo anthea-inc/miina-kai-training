@@ -7,8 +7,20 @@
     <!--16 ヘッド要素 keywords-->
     <meta charset="UTF-8" />
   </head>
+
   <body>
-    <h1 style="color: rgb(22, 22, 22)">私の好きなバンド紹介</h1>
+    <h1 style="color: rgb(255, 255, 255)">私の好きなバンド紹介</h1>
+    <div
+      style="
+        width: 500px;
+        height: 30px;
+        background-color: rgba(73, 249, 85, 0.5);
+      "
+    >
+      今回のお披露目会は私の好きなアーティストを紹介します！
+    </div>
+    <!--ブロック要素-->
+
     <ol
       style="
         width: 200px;
@@ -16,12 +28,12 @@
         background-color: rgba(134, 218, 248, 0.5);
       "
     >
-      <li>back number</li>
-      <li>SPYAIR</li>
-      <li>米津 玄師</li>
+      <li href="#back">back number</li>
+      <li href="#spyair">SPYAIR</li>
+      <li href="#yone">米津 玄師</li>
     </ol>
 
-    <br />
+    <br /><!--html11 テーブル-->
     <table border="1">
       <thead>
         <tr>
@@ -53,21 +65,140 @@
       </tbody>
     </table>
     <br /><br /><br /><br />
-    <h2 class="white">back number</h2>
-    <img src="wan.jpg" alt="back numberのメンバー写真" width="300" />
 
-    <p></p>
-    <p>
+    <h2 id="back">back number</h2>
+    <!--クラス指定して使用-->
+    <img src="wan.jpg" alt="back numberのメンバー写真" width="400" />
+    <p class="white">特徴</p>
+    <p class="white">
       曲は接妙な言い回しの歌詞とテンポ感の良いメロディが特徴で、<br />
       片思いや失恋、幸せな恋愛など幅広い恋愛のリアルな感情をテーマにした楽曲が特徴。
     </p>
-    <p>
-      <!--インラインスタイル-->
-      恋愛以外の曲：「<span style="color: rgb(142, 157, 240)">水平線</span
-      >」は<br />
-      コロナ禍で夢を断たれた高校生たちの悲しみに寄り添うために作成した曲で、<br />
-      youtube2.4億回再生されています！<br />
+    <p class="white">
+      男性目線だけではなく、女性目線の曲も多く<br />
+      女々しく切ない歌詞が、多くの人が共感するみたいです。<br />
     </p>
-    <h3 class="red">おすすめしたい私の好きな曲</h3>
+
+    <br /><br /><br />
+
+    <h3 class="red">back numberでおすすめしたい私の好きな曲</h3>
+    <br />
+
+    <b><h3>怪盗</h3></b>
+    <!--クラス指定してる-->
+    <p class="white">
+      イントロから好きなんですよね。<br />
+      mvは「世界のどこかにいる1人の怪盗の物語」を描いています。<br />
+      主人公＝怪盗で<br />
+      「君の笑顔盗む奴から 君を盗むのさ」<br />
+      「連れ去ってと 合図をくれたらここから君を奪って・・・」<br />
+      など怪盗が奪いたいもの＝ヒロイン<br />
+      無理やりには盗まない所や、歌詞の接妙な言い回し、どれだけヒロインの事を大切に想っているかなど、
+      是非歌詞1つ1つ凝視しながら聞いて欲しいです！<br />
+    </p>
+    <a
+      href="https://youtu.be/1DPldNasDgY"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="kaitou.jpg" alt="「怪盗」youtubeに移動します" width="300" /></a
+    ><br /><br /><br /><br /><br /><br />
+
+    <h2 id="spyair">SPYAIR</h2>
+
+    <img src="spyair.jpg" alt="SPYAIRのメンバー写真" width="500" />
+    <p class="white">特徴</p>
+    <p class="white">
+      ロックを基調にしながらも、さまざまな音楽スタイルを融合。<br />
+      歌詞は青春、挑戦、夢、友情などをテーマにしたものが多く、映画やアニメの主題歌の曲も多いです！(銀魂・ハイキューなど)<br />
+      2022年にボーカルIKEが病気療養のため脱退し、<span
+        style="color: rgb(160, 165, 255)"
+        >2023年から新ボーカルYOSUKEが加入</span
+      ><br /><!--インライン要素-->
+      加入して日が浅いのにも関わらず、ライブでも強い歌唱力と魅せるパフォーマンスが<br />
+      完璧なのは本当にすごいと思います。
+    </p>
+
+    <img src="yosuke.webp" alt="yosukeの写真" width="500" />
+    <br /><br /><br />
+
+    <h3 class="red">SPYAIRでおすすめしたい私の好きな曲</h3>
+    <h3>BEAUTIFUL DAYS</h3>
+    <iframe
+      width="731"
+      height="411"
+      src="https://www.youtube.com/embed/MqfiFhRlIAQ"
+      title="SPYAIR『BEAUTIFUL DAYS』"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <p class="white">
+      激しめ系が定番ですが、今回は落ち着きのある曲を紹介！<br />
+      日々の生活の中で迷ったり、自分に自信が持てない時に、背中を力強く押してくれるメッセージソングです<br />
+      全ての歌詞が好きですが、サビの<br />
+      「プラスにもっと変えていける そうやって信じていこう」<br />
+      「誰かが君を笑っても俺は笑ったりしないよ」<br />
+      「どんなに遠く思えても 自分で選んだ道をそのままいけばいい」<br />
+      とプラス思考で真っ直ぐなメッセージにいつも助けられています。<br /><br />
+      「だから、「自分に何もない」なんて
+      抱え込むよりも「何ができるんだろう」って 俺とワクワクしようよ」<br />
+      1人ではなく「俺と」という歌詞がいいんですよね！！<br />
+    </p>
+    <p class="white">是非聞いてみて下さい！</p>
+    <br /><br /><br /><br /><br /><br />
+
+    <h2 id="yone">米津 玄師</h2>
+    <img src="yone.jpeg" alt="米津の写真" width="500" />
+
+    <p class="white">特徴</p>
+    <!--クラス使用-->
+    <p class="white">
+      独特で多彩な音楽性があり、さまざまなジャンルの歌があります。<br />
+      歌詞の言葉選びや言い換えが何より独特だがストレートに心に入ってきます。<br />
+      良い意味で癖が強く、中毒性がありますね<br /><br />
+
+      米津玄師がデビュー前、ボカロp「ハチ」として活動していたのは有名な話ですね。<br />
+      その頃の曲も好きでしたね！
+    </p>
+    <br />
+
+    <h3 class="red">米津 玄師でおすすめしたい私の好きな曲</h3>
+    <h3>kic</h3>
+    <iframe
+      width="688"
+      height="387"
+      src="https://www.youtube.com/embed/M2cckDmNLMI"
+      title="米津玄師 Kenshi Yonezu - KICKBACK"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <p class="white">
+      アニメ「チェンソーマン」のopの曲で<br />
+      アップテンポで力強い感じがすごく好きで、私の中の好きな音楽ドンピシャでしたね。<br />
+      歌詞の中で『「止まない雨は無い」より先にその傘をくれよ』というフレーズが一番好きです！
+      mvもいい感じにぶっ飛ん出るのでぜひ！みてみて下さい！！
+    </p>
+
+    <h2>さいごに</h2>
+
+    <!--テーブル 27-->
+    <!--リスト完了ol 14  dl,dt,ddまだ使用できず-->
+    <!--ブロック要素13とインライン要素114-->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
   </body>
 </html>
