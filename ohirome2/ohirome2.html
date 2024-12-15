@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <title>私の好きなアーティスト</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="ohirome2.css" />
     <meta name="keywords" content="バンド,歌,オススメ" />
-    <!--16 ヘッド要素 keywords-->
+    <!--16 ヘッド要素meta keywords-->
     <meta charset="UTF-8" />
+    <!--16 ヘッド要素 keywords-->
   </head>
 
   <body>
-    <h1 style="color: rgb(255, 255, 255)">私の好きなバンド紹介</h1>
+    <!--最初-->
+    <h1 style="color: rgb(255, 255, 255)">私の好きなアーティスト紹介</h1>
+
     <div
       style="
-        width: 500px;
-        height: 30px;
-        background-color: rgba(73, 249, 85, 0.5);
+        width: 550px;
+        height: 50px;
+        background-color: rgba(4, 2, 98, 0.5);
+        color: white;
       "
     >
-      今回のお披露目会は私の好きなアーティストを紹介します！
+      今回のお披露目会では、私が大好きなアーティストについて紹介します。
+      <br />
+      彼らの音楽や魅力を少しでも皆さんにお伝えできたら嬉しいです。 >
+      <!--ブロックレベル要素-->
     </div>
-    <!--ブロック要素-->
+    <br /><br />
 
     <ol
       style="
         width: 200px;
         height: 80px;
-        background-color: rgba(134, 218, 248, 0.5);
+        background-color: rgba(134, 218, 248, 0.8);
+        font-size: 20p;
       "
     >
-      <li href="#back">back number</li>
-      <li href="#spyair">SPYAIR</li>
-      <li href="#yone">米津 玄師</li>
+      <li>back number</li>
+      <li>SPYAIR</li>
+      <li>米津 玄師</li>
     </ol>
+    <!--id-->
+    <div class="mokuji">
+      <p>目次</p>
+      <a href="#back">back number</a><br />
+      <a href="#spyair">SPYAIR</a><br />
+      <a href="#yone">米津 玄師</a><br />
+      <a href="#last">さいごに</a><br />
+    </div>
+    <hr />
+    <br />
 
     <br /><!--html11 テーブル-->
     <table border="1">
@@ -65,6 +84,7 @@
       </tbody>
     </table>
     <br /><br /><br /><br />
+    <hr />
 
     <h2 id="back">back number</h2>
     <!--クラス指定して使用-->
@@ -76,7 +96,7 @@
     </p>
     <p class="white">
       男性目線だけではなく、女性目線の曲も多く<br />
-      女々しく切ない歌詞が、多くの人が共感するみたいです。<br />
+      女々しく切ない歌詞が、多くの人を共感させるみたいです。<br />
     </p>
 
     <br /><br /><br />
@@ -96,14 +116,10 @@
       無理やりには盗まない所や、歌詞の接妙な言い回し、どれだけヒロインの事を大切に想っているかなど、
       是非歌詞1つ1つ凝視しながら聞いて欲しいです！<br />
     </p>
-    <a
-      href="https://youtu.be/1DPldNasDgY"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://youtu.be/1DPldNasDgY">
       <img src="kaitou.jpg" alt="「怪盗」youtubeに移動します" width="300" /></a
     ><br /><br /><br /><br /><br /><br />
-
+    <hr />
     <h2 id="spyair">SPYAIR</h2>
 
     <img src="spyair.jpg" alt="SPYAIRのメンバー写真" width="500" />
@@ -124,6 +140,7 @@
 
     <h3 class="red">SPYAIRでおすすめしたい私の好きな曲</h3>
     <h3>BEAUTIFUL DAYS</h3>
+    <!--iframe-->
     <iframe
       width="731"
       height="411"
@@ -148,7 +165,7 @@
     </p>
     <p class="white">是非聞いてみて下さい！</p>
     <br /><br /><br /><br /><br /><br />
-
+    <hr />
     <h2 id="yone">米津 玄師</h2>
     <img src="yone.jpeg" alt="米津の写真" width="500" />
 
@@ -182,23 +199,21 @@
       歌詞の中で『「止まない雨は無い」より先にその傘をくれよ』というフレーズが一番好きです！
       mvもいい感じにぶっ飛ん出るのでぜひ！みてみて下さい！！
     </p>
+    <hr />
+    <h2 id="last">さいごに</h2>
+    <p class="white">
+      最後までご覧いただきありがとうございました！<br />
+      このアーティストの音楽や魅力が少しでも伝わったなら幸いです。<br />
+      ぜひ気になる曲がありましたら聴いてみてください！
+    </p>
 
-    <h2>さいごに</h2>
-
-    <!--テーブル 27-->
+    <!--テーブル 54-->
     <!--リスト完了ol 14  dl,dt,ddまだ使用できず-->
-    <!--ブロック要素13とインライン要素114-->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
+    <!--ブロック要素16とインライン要素130-->
+    <!--idを学ぼう 43〜 -->
+    <!--iframe 143 184 -->
+    <!--ヘッド要素 meta要素 7.9 styleタグ15 linkタグはつけていない-->
+    <!--クラスはcssで作成 38 81 130と沢山-->
+    <!--コンピュータ コード要素-->
   </body>
 </html>
