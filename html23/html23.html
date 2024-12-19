@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-</head>
-<body>
-  <from action="https://httpbin.org/get">
-    <input type="text" id="name" name="name">
-    <input type="number" id="age" name="age">
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <from action="https://httpbin.org/get" method="get">
+      <label for="name">名前</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="名前を入力"
+        required
+      /><br />
+      <label for="age">年齢</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="0"
+        placeholder="年齢を入力"
+        required
+      />
+      <button type="submit">送信</button>
+    </from>
+    <br /><br />
+    <br /><br />
+    <from action="https://httpbin.org/post" method="post">
+      <label for="email">メールアドレス</label>
+      <input type="email" name="email" /><br />
+      <label>password</label>
+      <input type="password" id="email" name="password" />
+      <button type="submit">送信</button>
+    </from>
+  </body>
 </html>
