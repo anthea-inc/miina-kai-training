@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
   </head>
   <body>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000000"
+    >
+    </canvas>
     <script>
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
       ctx.beginPath();
-      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-      ctx.stroke(30, 40);
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI * Math.PI);
+      ctx.stroke();
     </script>
   </body>
 </html>
