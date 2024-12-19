@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-    <from action="https://httpbin.org/get" method="get">
+    <form action="https://httpbin.org/get" method="get">
       <label for="name">名前</label>
       <input
         type="text"
@@ -23,15 +23,24 @@
         required
       />
       <button type="submit">送信</button>
-    </from>
+    </form>
     <br /><br />
     <br /><br />
-    <from action="https://httpbin.org/post" method="post">
+    <form action="https://httpbin.org/post" method="post">
       <label for="email">メールアドレス</label>
-      <input type="email" name="email" /><br />
+      <input
+        type="email"
+        name="email"
+        placeholder="メールアドレスを入力"
+      /><br />
       <label>password</label>
-      <input type="password" id="email" name="password" />
+      <input
+        type="password"
+        id="email"
+        name="password"
+        placeholder="パスワードを入力"
+      />
       <button type="submit">送信</button>
-    </from>
+    </form>
   </body>
 </html>
