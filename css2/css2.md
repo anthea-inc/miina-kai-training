@@ -1,10 +1,10 @@
 以下の CSS プロパティについて調査し、それぞれの役割を説明してください。
 
-background-color：背景色を設定
+background-color：要素の背景色を指定。
 
-background-image：要素に 1 つ以上の背景画像を設定
+background-image：要素に背景画像を指定。
 
-background-repeat：(リピート)背景画像をどのように繰り返すかを設定。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく繰り返さないようにしたりすることができる。
+background-repeat：(リピート)背景画像をどのように繰り返すかを設定。（水平・垂直方向の繰り返し）
 
 repeat-x：(repeat no-repeat の短縮形)背景画像は水平方向にのみ繰り返される。
 描画領域の幅が背景画像の幅の倍数でない場合は、端の画像が切り取られる。
@@ -15,8 +15,8 @@ repeat：既定値。画像は背景画像が描画領域全体を覆うのに�
 no-repeat：画像は繰り返し描画されない。(したがって背景画像描画領域が完全に埋め尽くされるとは限らない。)
 背景画像の位置は CSS の　 background-position プロパティで定義される。
 
-background-position：(ポジション)背景画像の初期位置を設定
+background-position：(ポジション)背景画像の表示位置を指定。
 
-background-attachment：背景画像の位置をビューポート内で固定するか、またはその包含ブロックとともにスクロールするかを設定する。
+background-attachment：背景画像をビューポート内で固定するか、スクロールするかを指定。
 
-background：
+background：背景に関連するプロパティを一括で指定。（色、画像、位置、繰り返しなど）

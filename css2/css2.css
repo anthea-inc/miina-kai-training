@@ -1,0 +1,36 @@
+.background-color {
+  background-color: lawngreen;
+}
+
+.background-image {
+  background-image: url(css2.png);
+}
+
+.background-repeat {
+  background-image: url(css2.png);
+  background-repeat: repeat;
+}
+
+.background-repeat-x {
+  background-image: url(css2.png);
+  background-repeat: repeat-x;
+}
+
+.background-no-repeat {
+  background-image: url(css2.png);
+  background-repeat: no-repeat;
+}
+
+.background-position {
+  background-image: url(css2.png);
+  background-position: center; /* 真ん中という意味 */
+}
+
+.background-attachment {
+  background-image: url(css2.png);
+  background-attachment: fixed; /* 画像固定 */
+}
+
+.background {
+  background: lightblue; /* なんでもできる */
+}
