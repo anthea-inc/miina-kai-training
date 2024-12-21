@@ -1,5 +1,5 @@
 div {
-  height: 200px;
+  height: 100px;
   margin: 20px;
   padding: 20px;
 }
@@ -10,21 +10,25 @@ div {
 
 .background-image {
   background-image: url(css2.png);
+  color: aliceblue;
 }
 
 .background-repeat {
   background-image: url(css2.png);
   background-repeat: repeat;
+  color: aliceblue;
 }
 
 .background-repeat-x {
   background-image: url(css2.png);
   background-repeat: repeat-x;
+  color: aliceblue;
 }
 
 .background-no-repeat {
   background-image: url(css2.png);
   background-repeat: no-repeat;
+  color: aliceblue;
 }
 
 .background-position {
