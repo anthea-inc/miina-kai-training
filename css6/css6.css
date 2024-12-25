@@ -1,0 +1,18 @@
+.container{
+  width:80%;
+  max-width: 800px;
+  min-width: 320px;
+}
+.main-box{
+  width:100%;
+  min-width: 200px
+  min-height: 10rem
+}
+
+h2{
+  font-size:1.5rem;
+}
+
+p{
+  font-size:1rem;
+}
