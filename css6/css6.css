@@ -1,26 +1,20 @@
-.container{
-  width:80%;
+.container {
+  width: 80vw;
   max-width: 800px;
   min-width: 320px;
+  background-color: aquamarine;
 }
-.main-box{
-  width:100%;
-  min-width: 200px
-  min-height: 10rem
-}
-
-h2{
-  font-size:1.5rem;
-  min-width: 320px;
-  min-height:320px;
+.main-box {
+  width: 100%;
+  min-width: 200px;
+  min-height: 10rem;
+  background-color: lawngreen;
 }
 
-p{
-  font-size:1rem;
-  height:768px;
-  width:768px;
+h2 {
+  font-size: 1.5rem;
 }
 
-
-
-
+p {
+  font-size: 1rem;
+}
