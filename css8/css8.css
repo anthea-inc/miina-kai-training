@@ -1,32 +1,32 @@
 .outline-style {
   outline-style: dotted;
-  width: 200px;
+  width: 300px;
   height: 50px;
 }
 
 .outline-width {
   outline-style: dotted;
   outline-width: thick;
-  width: 200px;
+  width: 300px;
   height: 50px;
 }
 
 .outline-color {
   outline-style: dotted;
   outline-color: red;
-  width: 200px;
+  width: 300px;
   height: 50px;
 }
 
 .outline {
   outline: 3px dashed red;
-  width: 200px;
+  width: 300px;
   height: 50px;
 }
 
 .outline-offset {
   outline-style: dotted;
   outline-offset: 15px;
-  width: 200px;
+  width: 300px;
   height: 50px;
 }
