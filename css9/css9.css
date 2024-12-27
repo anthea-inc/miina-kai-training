@@ -1,0 +1,73 @@
+.color {
+  color: blue;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.text-align-last {
+  text-align-last: right;
+}
+
+.direction {
+  direction: rtl;
+}
+.unicode-bidi {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+.vertical-align {
+  vertical-align: baseline;
+}
+
+.text-decoration-line {
+  text-decoration-line: underline;
+}
+
+.text-decoration-color {
+  text-decoration-color: aquamarine;
+  text-decoration-line: underline;
+}
+
+.text-decoration-style {
+  text-decoration-style: double;
+  text-decoration-line: underline;
+}
+
+.text-decoration-thickness {
+  text-decoration-thickness: 5px;
+  text-decoration-line: underline;
+}
+.text-decoration {
+  text-decoration: underline dotted red;
+}
+
+.text-transform {
+  text-transform: capitalize;
+}
+
+.text-indent {
+  text-indent: 3em;
+}
+
+.letter-spacing {
+  letter-spacing: 2em;
+}
+
+.line-height {
+  line-height: 6em;
+}
+
+.word-spacing {
+  word-spacing: 5px;
+}
+
+.white-space {
+  white-space: pre;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px pink;
+}
