@@ -5,6 +5,9 @@
 .text-align {
   text-align: center;
 }
+.text-align-last-wrapper {
+  width: 200px;
+}
 
 .text-align-last {
   text-align-last: right;
