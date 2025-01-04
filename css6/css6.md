@@ -42,12 +42,18 @@ span{ color: initial; }
 html
 < p>赤色指定< span>ここは黒色になる< /span>初期値（通常は黒）に戻す< /p>
 
-inherit：(インヘリット) 要素のプロパティの計算値を親要素から取得するよう指定。
-CSS の一括指定 all を含め、すべての CSS プロパティに適用する事ができる。
-(継承プロパティにおいては、既定の動作を推進するものであり、他のルールを上書きする場合にのみ必要)
+inherit：(インヘリット)使うと、その要素のすべての CSS の値を親要素から継承できる。
+
 使用方法：
-div { color: red;}
-p { color: inherit;}親要素の赤色を継承
+.parent {
+color: blue;
+font-size: 16px;
+padding: 10px;
+}
+
+.child {
+all: inherit; 親要素のすべてのスタイルを継承
+}
 
 (継承可能なプロパティ（例:color, font-family）にはデフォルトで適用されるため、指定は不要。
 非継承プロパティ（例:margin, border）にも明示的に継承を指定できる。)
