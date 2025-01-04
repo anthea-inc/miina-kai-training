@@ -1,0 +1,12 @@
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.separate {
+  border-collapse: separate;
+}
+
+td,
+th {
+  border: 2px solid blue;
+}
