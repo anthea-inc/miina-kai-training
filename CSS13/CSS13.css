@@ -43,9 +43,17 @@
   color: black;
 }
 
+.inherit {
+  /**/
+  display: inherit;
+  color: orange;
+}
+
 .visible {
   /**/
   visibility: visible;
+  background: #9eccb3;
+  width: 100px;
 }
 .hidden {
   /*非表示だけど隠れてるだけだから、いることがわかるように横と高さの幅を指定しよ*/
@@ -69,6 +77,10 @@
   background: lightpink;
   height: 50px;
   width: 300px;
+}
+
+.ko2 {
+  color: purple;
 }
 p {
   color: green;
