@@ -1,0 +1,70 @@
+.block {
+  /*占有幅全体を使用し、改行を発生させるから、幅指定必要だね*/
+  display: block;
+  width: 60%;
+  background-color: lightcyan;
+}
+
+.inline {
+  /*幅や高さの指定は無効だけど試しに指定してみよ*/
+  display: inline;
+  width: 80px;
+  background-color: beige;
+}
+
+.inline-block {
+  /*外部的には「インライン」内部的には「ブロック」*/
+  display: inline-block;
+  height: 60px;
+  width: 500px;
+  background-color: lightgreen;
+}
+
+.none {
+  /*非表示だし全て消える。*/
+  display: none;
+  background: #f47d44;
+  height: 60px;
+  width: 100px;
+}
+
+.contents {
+  /*子の要素が適応されるみたいです*/
+  display: contents;
+  background: #44f499;
+  height: 60px;
+  width: 100px;
+}
+
+.initial {
+  /*CSS仕様で定められたそのプロパティのデフォルト値に戻る*/
+  display: initial;
+}
+
+.visible {
+  /**/
+  visibility: visible;
+}
+.hidden {
+  /*非表示だけど隠れてるだけだから、いることがわかるように横と高さの幅を指定しよ*/
+  visibility: hidden;
+  background: #9eccb3;
+  width: 100px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  float: left;
+  padding: 20px;
+}
+
+.ko {
+  background: lightpink;
+  height: 50px;
+  width: 300px;
+}
