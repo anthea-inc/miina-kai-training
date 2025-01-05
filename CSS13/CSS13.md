@@ -9,6 +9,7 @@ inline:自身の前後に改行を生成しない 1 つ以上のインライン�
 
 inline-block:
 1 つめの回答：ブロックボックスを生成するが、周囲のコンテンツに対しては単一のインラインボックスであるかのように流れるようになる (置換要素の場合と似ているみたい)
+引用：https://developer.mozilla.org/ja/docs/Web/CSS/display
 
 ２つめ：ブロック要素のように幅や高さを指定できるが、インライン要素のように隣接する要素と横に並ぶ。
 
@@ -36,6 +37,42 @@ visible:要素を表示する。要素のボックスが通常どおり描画さ
 display: inline-block の特徴を以下の観点から説明してください。
 
 block との違い
+改行の有無
+inline-block：改行が発生せず、横並びになる
+block：要素の前後に改行が発生する
+
+横幅の占有
+inline-block：必要な幅だけ占有（子要素に応じる）
+block：親要素の幅全体を占有する
+
+用途
+inline-block：セクションや段落の分割に使用される
+block：横並びレイアウトやアイコン配置に適する
+
 inline との違い
+幅や高さの指定
+inline-block：有効
+inline：無効
+
+パディング・マージン
+inline-block：水平・垂直ともに有効
+inline：水平方向のみ影響
+
+ボックスモデル
+inline-block：幅や高さを自由に設定可能
+inline：無効テキストのサイズに依存
+
 課題 3
 display: none と visibility: hidden の違いを説明してください。
+
+どっちも要素を非表示にする
+
+存在
+display:none:要素も取得されず、完全にその場にない扱い。
+visibility:hidden:要素はあるけど見えない状態。(隠れている感じ)
+
+レイアウトへの影響
+display:none:レイアウトに影響を与えない
+visibility:hidden:要素自体は見えなくなるけど、そのスペースはそのまま残る
+
+わかりやすかった引用：https://qiita.com/rico/items/0f645e84028d4fe00be6#:~:text=visibility%3Ahidden%E3%81%AF%E5%90%8D%E5%89%8D%E3%81%AE,%E3%81%9D%E3%81%AE%E5%A0%B4%E3%81%AB%E3%81%AA%E3%81%84%E6%89%B1%E3%81%84%E3%80%82
