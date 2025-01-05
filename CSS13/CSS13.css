@@ -37,8 +37,10 @@
 }
 
 .initial {
-  /*CSS仕様で定められたそのプロパティのデフォルト値に戻る*/
+  /*CSS仕様で定められたそのプロパティのデフォルト値に戻る。ここに指定した色が基準値ってこと？*/
+  /*色指定しないと初期値に戻らないんやが*/
   display: initial;
+  color: black;
 }
 
 .visible {
@@ -67,4 +69,7 @@
   background: lightpink;
   height: 50px;
   width: 300px;
+}
+p {
+  color: green;
 }

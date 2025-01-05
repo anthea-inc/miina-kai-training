@@ -27,11 +27,18 @@
     <div class="contents">contents 自分は表示されず、中の子要素だけが表示される
       <div class="ko">親要素は背景色緑で、子要素は背景色赤
     </div>
-
-    <div class="initial">initial
-      <div style="color:red">子要素は赤色指定だが、黒になってる予定。赤じゃん。なにこれ失敗</div>
-
+    <fieldset>
+      <legend>inheritの試行錯誤</legend>
+    <div class="initial">initial第1:失敗
+      <div style="color:red">子要素は赤色指定だが、黒になってる予定。赤じゃん。なにこれ</div>
     </div>
+    <div style="color: #004cff;">感想欄:pに色指定してからclass指定って事か？</div>
+   <p>これはpで、pの色は緑指定</p>
+   <p class="initial">これは緑だが、initial指定</p>
+     
+    </div>
+  </fieldset>
+ 
 
     <div class="inherit">inherit</div>
 
