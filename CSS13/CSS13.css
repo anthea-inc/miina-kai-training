@@ -44,8 +44,7 @@
 }
 
 .inherit {
-  /**/
-  display: inherit;
+  /*親要素にinherit指定してたけど子要素につけるんだね、*/
   color: orange;
 }
 
@@ -80,8 +79,9 @@
 }
 
 .ko2 {
-  color: purple;
+  display: inherit;
 }
+
 p {
   color: green;
 }
