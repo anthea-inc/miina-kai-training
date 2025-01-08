@@ -1,0 +1,42 @@
+.dotted {
+  border-style: dotted;
+}
+
+.dashed {
+  border-style: dashed;
+}
+
+.solid {
+  border-style: solid;
+}
+.double {
+  border-style: double;
+}
+
+.none {
+  border-style: none;
+}
+
+.hidden {
+  border-style: hidden;
+}
+
+.width {
+  border-style: solid;
+  border-width: 2px;
+}
+
+.color {
+  border-style: solid;
+  border-color: lightsalmon;
+}
+
+.border {
+  border-style: solid;
+  border: 2px solid blue;
+}
+
+.radius {
+  border-style: solid;
+  border-radius: 10px;
+}
