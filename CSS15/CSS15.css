@@ -1,0 +1,23 @@
+.black {
+  position: static;
+  color: white;
+  background-color: black;
+  height: 100px;
+  width: 100px;
+}
+
+.gray {
+  position: relative;
+  z-index: 1;
+  background-color: lightgrey;
+  height: 100px;
+  width: 100px;
+}
+
+.green {
+  position: relative;
+  z-index: 2;
+  background-color: lightgreen;
+  height: 100px;
+  width: 100px;
+}
