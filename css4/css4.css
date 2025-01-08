@@ -1,0 +1,36 @@
+div {
+  background-color: lightpink;
+}
+
+.margin {
+  margin: 30px;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+.margin-right {
+  margin-right: 50px;
+}
+
+.margin-bottom {
+  margin-bottom: 40px;
+}
+
+.margin-left {
+  margin-left: 50px;
+}
+
+.parent {
+  margin-top: 50px;
+}
+
+.child {
+  margin-top: 30px;
+}
+
+.offset3 {
+  margin-top: 40px;
+  padding: 10px;
+}
