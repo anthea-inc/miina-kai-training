@@ -1,0 +1,27 @@
+.box {
+  width: 70px;
+  height: 70px;
+  background-color: lightsteelblue;
+  border: 1px solid blue;
+}
+
+.visible {
+  overflow: visible;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.auto {
+  overflow: auto;
+}
+
+.overflow {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
