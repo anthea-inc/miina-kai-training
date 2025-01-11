@@ -1,0 +1,12 @@
+.abc {
+  width: 400px;
+  height: 150px;
+  padding: 20px;
+  display: block;
+}
+.blue {
+  background: rgb(149, 149, 255);
+}
+.red {
+  color: red;
+}

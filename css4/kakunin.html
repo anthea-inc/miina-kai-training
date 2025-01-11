@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <style>
+      p {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .container {
+        border: 1px solid #ccc;
+        margin: 20px;
+        padding: 20px;
+      }
+
+      /* 1. 隣接兄弟要素 */
+      .sibling-1 {
+        background-color: #ffebee;
+        margin-bottom: 50px;
+        padding: 20px;
+      }
+
+      .sibling-2 {
+        background-color: #e3f2fd;
+        margin-top: 30px;
+        padding: 20px;
+      }
+
+      /* 2. 親と子孫要素 */
+      .parent {
+        margin-top: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .child {
+        margin-top: 25px;
+        background-color: #e8f5e9;
+        padding: 20px;
+      }
+
+      /* 3. 空ブロック */
+      .empty-block {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        /* heightやpaddingを設定しないことで空ブロックになります */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 隣接兄弟要素のマージン相殺 -->
+    <div class="container">
+      <!-- 大きい方の50pxが適用され、間隔は50pxになります -->
+      <!-- 50px + 30px = 80pxにはなりません -->
+      <p>1. 隣接兄弟要素のマージン相殺</p>
+      <div class="sibling-1">最初の要素 (margin-bottom: 50px)</div>
+      <div class="sibling-2">次の要素 (margin-top: 30px)</div>
+    </div>
+
+    <!-- 2. 親と子孫要素のマージン相殺 -->
+    <div class="container">
+      <p>2. 親と子孫要素のマージン相殺</p>
+      <!-- 親要素: margin-top: 40px -->
+      <div class="parent">
+        <!-- 大きい方の40pxが適用され、親要素の外側に出ます -->
+        <!-- 40px + 25px = 65pxにはなりません -->
+        <div class="child">子要素 (margin-top: 25px)</div>
+      </div>
+    </div>
+
+    <!-- 3. 空ブロックのマージン相殺 -->
+    <div class="container">
+      <p>3. 空ブロックのマージン相殺</p>
+      <!-- 空のブロック要素: margin-top: 60px, margin-bottom: 40px -->
+      <!-- 大きい方の60pxが適用されます -->
+      <!-- 60px + 40px = 100pxにはなりません -->
+      <div class="empty-block"></div>
+    </div>
+  </body>
+</html>

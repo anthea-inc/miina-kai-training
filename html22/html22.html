@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <label>name</label>
+    <input type="text" name="username" /><br /><br />
+
+    <label>value</label>
+    <input type="text" value="初期入力" />
+    <input type="date" value="2014-05-15" /><br /><br />
+
+    <label>readonly</label>
+    <input type="text" name="fixed" value="変更不可" readonly /><br /><br />
+
+    <label>disabled</label>
+    <input type="text" name="inactive" value="無効" disabled /><br /><br />
+
+    <label>size</label>
+    <input type="text" name="username" size="30" /><br /><br />
+
+    <label>maxlength</label>
+    <input type="text" name="password" maxlength="10" /><br /><br />
+
+    <label>min</label>
+    <input type="number" name="age" min="15" />
+    <p>min最低値が15から</p>
+    <br />
+
+    <label>max</label>
+    <input type="number" name="age" max="30" />
+    <p>maxが30まで</p>
+    <br />
+
+    <label>multiple</label>
+    <input type="email" name="emails" multiple /><br /><br />
+
+    <label>pattern</label>
+    <label for="username">郵便番号(ハイフン不必要)</label>
+    <input
+      id="username"
+      name="username"
+      type="text"
+      value="1210807"
+      pattern="\w{7}"
+      required
+    /><br /><br />
+
+    <label>placeholder</label>
+    <input
+      type="text"
+      name="name"
+      placeholder="お名前を入力してください"
+    /><br /><br />
+
+    <label>required</label>
+    <input type="text" name="name" required /><br /><br />
+
+    <label>step</label>
+    <input type="number" name="price" min="0" max="100" step="10" /><br /><br />
+
+    <label>autofocus</label>
+    <input type="text" name="search" autofocus /><br /><br />
+
+    <label>width</label>
+    <input type="image" src="img_pineapple.jpg" width="150" /><br /><br />
+
+    <label>height</label>
+    <input type="image" src="img_pineapple.jpg" height="50" /><br /><br />
+
+    <label>list</label>
+    <input type="text" list="food" />
+    <datalist id="food">
+      <option value="たこ焼き"></option>
+      <option value="お好み焼き"></option>
+      <option value="串カツ"></option></datalist
+    ><br /><br />
+
+    <label>autocomplete</label>
+    <input type="text" name="username" autocomplete="on" />
+  </body>
+</html>

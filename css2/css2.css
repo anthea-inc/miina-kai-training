@@ -1,0 +1,47 @@
+div {
+  height: 1000px;
+  width: 1000px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.background-color {
+  background-color: lawngreen;
+}
+
+.background-image {
+  background-image: url(css2.png);
+  color: aliceblue;
+}
+
+.background-repeat {
+  background-image: url(css2.png);
+  background-repeat: repeat;
+  color: aliceblue;
+}
+
+.background-repeat-x {
+  background-image: url(css2.png);
+  background-repeat: repeat-x;
+  color: aliceblue;
+}
+
+.background-no-repeat {
+  background-image: url(css2.png);
+  background-repeat: no-repeat;
+  color: aliceblue;
+}
+
+.background-position {
+  background-image: url(css2.png);
+  background-position: center; /* 真ん中という意味 */
+}
+
+.background-attachment {
+  background-image: url(css2.png);
+  background-attachment: fixed; /* 画像固定 */
+}
+
+.background {
+  background: lightblue; /* なんでもできる */
+}

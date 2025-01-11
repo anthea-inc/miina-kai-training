@@ -1,0 +1,23 @@
+div {
+  background-color: aquamarine;
+}
+
+.padding {
+  padding: 70px;
+}
+
+.padding-top {
+  padding-top: 40px;
+}
+
+.padding-right {
+  padding-right: 70px;
+}
+
+.padding-bottom {
+  padding-bottom: 40px;
+}
+
+.padding-left {
+  padding-left: 50px;
+}
