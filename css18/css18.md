@@ -82,7 +82,7 @@ li:nth-child(3) {
 color: green;
 }
 
-:only-child 　要素に兄弟がいない場合に一致　
+:only-child 　要素に兄弟がいない場合に一致
 (親要素の中でその要素が唯一の子要素である場合に一致する。)
 使用例:親要素の中で唯一の div に青い枠線を付ける。
 div:only-child {

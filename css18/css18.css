@@ -1,0 +1,57 @@
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: purple;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+button:active {
+  color: red;
+}
+
+input:focus {
+  border: 2px solid blue;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+input:enabled {
+  border: 1px solid green;
+}
+
+input:checked {
+  accent-color: green;
+  border: none;
+  outline: 2px solid greenyellow;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-weight: bold;
+}
+
+li:nth-child(3) {
+  color: green;
+}
+
+.only {
+  & p {
+    &:only-child {
+      border: 2px solid blue;
+    }
+  }
+}
+
+p:not(.highlight) {
+  opacity: 0.5;
+}
