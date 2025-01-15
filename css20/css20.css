@@ -1,0 +1,23 @@
+div {
+  background-color: #f0a4ff;
+  font-weight: bold;
+  font-size: 130%;
+  width: 100px;
+  height: 100px;
+}
+
+.one {
+  opacity: 1;
+}
+
+.too {
+  opacity: 0.5;
+}
+
+.three {
+  opacity: 0.3;
+}
+
+.for {
+  opacity: 0.1;
+}
