@@ -13,7 +13,7 @@ flex-direction（フレックス・ディレクション）：アイテムの並
 row（ロウ）：アイテムを横並び（左 → 右）に配置
 ・column（カラム）：アイテムを縦並び（上 → 下）に配置
 ・row-reverse（ロウ・リバース）：row の逆で、右 → 左に並ぶ
-・column-reverse カラム・リバース）column の逆で、下 → 上に並ぶ
+・column-reverse (カラム・リバース）column の逆で、下 → 上に並ぶ
 
 flex-wrap（フレックス・ラップ）：アイテムを折り返すかどうかを指定
 ・nowrap（ノー・ラップ）：折り返さず、1 行に収める
