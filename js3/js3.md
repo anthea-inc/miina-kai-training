@@ -72,10 +72,26 @@ JavaScript には標準で複数の組み込みオブジェクトが用意され
 プロパティの「値」として関数を代入すると、メソッドになる
 
 Number：役割：数値を扱う
+扱える最大の数値 ↓
+console.log(Number.MAX_VALUE);
+
 Math：役割：数学の計算
+0 以上 1 未満のランダムな数を取得する ↓
+console.log(Math.random());
+
 Date：役割：日付・時間を扱う：
+現在の日だけ
+let today = new Date();
+let day = today.getDate();
+console.log(day);
+
 String：役割：文字列を操作
+"HELLO"（大文字に変換）
+let text = "hello";
+console.log(text.toUpperCase());
+
 Error：役割：エラーの管理
+
 Function：役割：関数を作る・実行
 Boolean：役割：真偽値を扱う
 
