@@ -80,8 +80,8 @@ false,0,""（空の文字列）,null,undefined,NaN
 | NaN             | NaN             | NaN    | false   |
 | null            | null            | 0      | false   |
 | undefined       | undefined       | NaN    | false   |
-| []              | 0               |        | true    |
-| ''              | 0               |        | false   |
+| []              |                 | 0      | true    |
+| ''              |                 | 0      | false   |
 | [23]            | 23              | 23     | true    |
 | [10,23]         | 10,23           | NaN    | true    |
 | ' '             |                 | 0      | true    |
