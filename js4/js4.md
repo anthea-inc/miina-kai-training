@@ -65,4 +65,26 @@ false,0,""（空の文字列）,null,undefined,NaN
 5 行目で「e=c-true」c の結果の 5 と、true は 1 として扱われるので「5-1 ＝ 4」で 4 になる。
 暗黙的な型変換で引き算を使うと、両方の値が自動的に数値に変換する。（true は１、false は 0）
 
-実践課題 2
+実践課題 3
+
+| Value           | String          | Number | Boolean |
+| --------------- | --------------- | ------ | ------- |
+| 1               | 1               | 1      | true    |
+| '1'             | 1               | 1      | true    |
+| -1              | -1              | -1     | true    |
+| '-1'            | -1              | -1     | true    |
+| 0               | 0               | 0      | false   |
+| '0'             | 0               | 0      | true    |
+| false           | false           | 0      | false   |
+| true            | true            | 1      | true    |
+| NaN             | NaN             | NaN    | false   |
+| null            | null            | 0      | false   |
+| undefined       | undefined       | NaN    | false   |
+| []              | 0               |        | true    |
+| ''              | 0               |        | false   |
+| [23]            | 23              | 23     | true    |
+| [10,23]         | 10,23           | NaN    | true    |
+| ' '             |                 | 0      | true    |
+| ['fun']         | fun             | NaN    | true    |
+| ['fun','enjoy'] | fun,enjoy       | NaN    | true    |
+| {}              | [object Object] | NaN    | true    |
