@@ -63,3 +63,20 @@ false
 null
 undefined
 NaN（無効な数値）
+
+実践課題 3
+1,console.log('Alice' ?? 'ゲスト');
+2,console.log('' ?? 'ゲスト');
+3,console.log(null ?? 'ゲスト');
+4,console.log(undefined ?? 'ゲスト');
+
+結果
+Alice
+
+ゲスト
+ゲスト
+
+１'Alice'は文字列で、null または undefined ではないので、そのまま文字列で結果が出る。
+2 空文字はデフォルト値にならないから、そのまま扱われる
+null または undefined の場合に限りデフォルト値(右側の値)を返す役割があるので
+3,4 はデフォルト値のゲストが入る。
