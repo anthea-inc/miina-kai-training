@@ -1,9 +1,20 @@
-let age = 20;
+const readline = require("readline");
 
-if (age >= 20) {
-  console.log("成人済み");
-} else if (age >= 13) {
-  console.log("中学生以上");
-} else {
-  console.log("子供");
-}
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("数値を入力してください: ", (input) => {
+  let num = Number(input);
+
+  if (num > 0) {
+    console.log("正の数です");
+  } else if (num < 0) {
+    console.log("負の数です");
+  } else {
+    console.log("ゼロです");
+  }
+
+  rl.close();
+});
