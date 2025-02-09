@@ -1,5 +1,6 @@
-for (let number = 1; number <= 10; ) {
-  while (number <= 5) break;
-  console.log(number);
-  number += 1;
+for (let i = 1; i < 11; i++) {
+  console.log(i);
+  if (i === 5) break;
 }
+
+// 後置インクリメント
