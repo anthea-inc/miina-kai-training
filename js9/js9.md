@@ -216,6 +216,29 @@ Computed Property Names とは：オブジェクトのプロパティ名を変�
 
 オブジェクトからプロパティを削除する際の delete 演算子の使い方、削除後の挙動および注意点について、具体例を交えて考察してください。
 
+delete 演算子とは：オブジェクトの特定のプロパティを完全に削除する演算子。
+削除されたプロパティは完全に消える。(undefined を代入するだけでは、プロパティ自体は残る。）
+const で宣言されたオブジェクトでも プロパティは削除できる。
+
+delete 演算子の使い方：
+const person = {
+name: "Miina",
+age: 22,
+city: "Hokkaido"
+};
+
+delete person.age; // このプロパティを削除する
+
+console.log(person);
+//　この状態で console.log すると{ name: "Miina", city: "Tokyo" }で age が消えている
+console.log(person.age); と指定しても undefined と出る。
+
+注意点：const で宣言していてもプロパティの削除は OK だが、オブジェクト自体の再代入は NG。
+delete はオブジェクトのプロパティにしか使えない。
+配列の要素を削除できるが、空のスロットができてバグの原因になる。
+
+<hr>
+
 Object.freeze メソッドを利用してオブジェクトのプロパティの追加・変更・削除を防止する方法と、その使用上の注意点について、実際のコード例を用いて解説してください.
 
 in 演算子/Object.hasOwn/Object.prototype.hasOwnProperty を用いたプロパティの存在確認方法について、それぞれの特徴や使い分けを、具体例とともに説明してください.
