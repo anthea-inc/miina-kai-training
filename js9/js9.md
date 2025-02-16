@@ -345,4 +345,52 @@ Object.assign(ターゲットオブジェクト, ソースオブジェクト 1, 
 ターゲットオブジェクト → ここにマージされた結果が入る
 ソースオブジェクト 1, ソースオブジェクト 2, ... → これらのオブジェクトの内容がターゲットオブジェクトにコピーされる。
 
+マージ
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+const mergedObj = Object.assign({}, obj1, obj2);
+
+console.log(mergedObj);
+
+出力結果
+{ a: 1, b: 3, c: 4 }
+obj1 と obj2 のプロパティをマージ
+b の値は obj2 の b:3 で上書きされる。
+空の {} をターゲットにすることで、元の obj1 や obj2 は変更されない。
+
+コピー：
+const original = { name: "Miina", age: 22 };
+
+// `Object.assign()` で新しいオブジェクトを作成（クローン）
+const clone = Object.assign({}, original);
+({}（空のオブジェクト）を最初の引数にしている → ここに original の内容をコピーする)
+
+console.log(clone);
+出力結果: { name: "Miina", age: 22 }
+
+console.log(clone === original);
+出力結果:false（別のオブジェクトになっている）
+なぜ false？
+新しいオブジェクト {} にプロパティをコピーしていて、同じデータだけど、original とは別のオブジェクト。JavaScript ではオブジェクト同士を === で比較すると、同じオブジェクトを参照している場合のみ true になるから。
+
 スプレッド構文を利用して、オブジェクトのプロパティを展開・マージする例を具体的なコード例を交えて説明してください.
+
+スプレッド構文 (...) ：オブジェクトのプロパティを展開・マージすることができる。
+Object.assign() よりも簡潔に書ける
+const person = { name: "Miina", age: 22 };
+const clone = { ...person };
+// person のプロパティをすべて展開して新しいオブジェクトを作成
+
+console.log(clone);
+結果：{ name: "Miina", age: 22 }
+
+マージ方法：
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+const mergedObj = { ...obj1, ...obj2 };
+
+console.log(mergedObj);
+結果: { a: 1, b: 3, c: 4 }
+後から展開した obj2 が優先され、b: 2 が b: 3 に上書きされる
