@@ -14,3 +14,6 @@ const person = {
 
 console.log(person.name);
 console.log(person.address.city);
+
+console.log(person["birth date"]);
+console.log(person["job-title"]);
