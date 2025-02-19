@@ -71,3 +71,29 @@ console.log("-----------ステップ4-1--------------");
 console.log(Object.keys(frozenPerson));
 console.log(Object.values(frozenPerson));
 console.log(Object.entries(frozenPerson));
+
+console.log("-----------ステップ4-2--------------");
+
+const fruit = {
+  apple: "りんご",
+  banana: "バナナ",
+  grape: "ぶどう",
+};
+
+for (let key in fruit) {
+  console.log(key + " は " + fruit[key] + " です");
+}
+
+console.log("-----------ステップ4-3.4--------------");
+
+const additionalInfo = {
+  nationality: "Japanese",
+  age: 35,
+};
+
+const newObject = Object.assign({}, person, additionalInfo);
+console.log(newObject);
+
+console.log("-----------ステップ4-5--------------");
+const newPerson = { ...person };
+console.log(newPerson);
