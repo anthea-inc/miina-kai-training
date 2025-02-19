@@ -1,9 +1,9 @@
 const id = 8;
-const name = "Miina";
+const namae = "Miina";
 
 const person = {
   id,
-  name,
+  namae,
   "job-title": "software Engineer",
   "birth date": "2002-08-18",
   address: {
@@ -17,3 +17,16 @@ console.log(person.address.city);
 
 console.log(person["birth date"]);
 console.log(person["job-title"]);
+
+console.log(person?.from);
+console.log(person.address?.phone);
+
+const newPropKey = "hobby";
+const newPropValue = 5;
+
+person[newPropKey] = newPropValue;
+console.log(person);
+
+person.namae = "Kai";
+
+console.log(person);
