@@ -102,7 +102,7 @@ const hasEigyo = employees.some((employees) =>
 console.log(hasEigyo); // これも知識課題の例題のおかげですんなり出来た
 
 console.log("-----------------実践課題5-1-------------------");
-employees.push({ id: 4, name: "高橋次郎" });
+employees.push({ id: 4, name: "高橋次郎" }); // ✅
 console.log(employees);
 
 console.log("-----------------実践課題5-2-------------------");
@@ -110,7 +110,34 @@ employees.pop();
 console.log(employees);
 
 console.log("-----------------実践課題5-3-------------------");
-employees.unshift({ id: 5, name: "山本花子" });
+employees.unshift({ id: 5, name: "山本花子" }); // ✅
 console.log(employees);
 
 console.log("-----------------実践課題5-4-------------------");
+employees.shift();
+console.log(employees);
+
+console.log("-----------------実践課題5-5-------------------");
+const kobayashi = employees.concat(newEmployees); // concatメソッド
+console.log(kobayashi);
+
+console.log("------");
+
+const koba = [...employees, ...newEmployees]; // スプレッド構文（...）
+console.log(koba);
+
+console.log("-----------------実践課題5-6-------------------");
+employees.splice(2, 1);
+console.log(employees);
+
+console.log("-----------------実践課題5-7-------------------");
+
+employees.length = 0;
+console.log(employees);
+console.log("------");
+const Kuuhaku = [];
+console.log(Kuuhaku);
+
+console.log("-----------------実践課題6-------------------");
+const maps = employees.map((employees) => employees.projects.flat()); // 直感でやるから分からない。
+console.log(maps);
