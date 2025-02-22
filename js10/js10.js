@@ -1,4 +1,4 @@
-const flatArray = [1, 2, [3, 4, [5, 6]]];
+const numbers = [1, 2, 3, 4, 5];
+const total = numbers.reduce((sum, num) => sum + num, 0);
 
-const flattened = flatArray.flat(2); // 1階層だけ展開
-console.log(flattened);
+console.log(total); // 15
