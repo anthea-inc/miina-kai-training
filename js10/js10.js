@@ -96,13 +96,11 @@ const sliced = employees.slice(0, 2);
 console.log(sliced); // これすんなり出来たの嬉しい
 
 console.log("-----------------実践課題4-4-------------------");
-const hasEigyo = employees.some((employees) =>
-  employees.department.includes("営業")
-);
+const hasEigyo = employees.some((employee) => employee.department === "営業");
 console.log(hasEigyo); // これも知識課題の例題のおかげですんなり出来た
 
 console.log("-----------------実践課題5-1-------------------");
-employees.push({ id: 4, name: "高橋次郎" }); // ✅
+employees.push(pushEmployee); //
 console.log(employees);
 
 console.log("-----------------実践課題5-2-------------------");
@@ -110,7 +108,7 @@ employees.pop();
 console.log(employees);
 
 console.log("-----------------実践課題5-3-------------------");
-employees.unshift({ id: 5, name: "山本花子" }); // ✅
+employees.unshift(unshiftEmployee); //
 console.log(employees);
 
 console.log("-----------------実践課題5-4-------------------");
@@ -131,13 +129,21 @@ employees.splice(2, 1);
 console.log(employees);
 
 console.log("-----------------実践課題5-7-------------------");
+const copyArray = [...employees];
+console.log(copyArray);
+copyArray.length = 0;
+console.log(copyArray);
 
-employees.length = 0;
-console.log(employees);
 console.log("------");
-const Kuuhaku = [];
-console.log(Kuuhaku);
+let copy2Array = [...employees]; // constは再代入できないが、letはできる。
+console.log(copy2Array);
+copy2Array = [];
+console.log(copy2Array);
 
 console.log("-----------------実践課題6-------------------");
-const maps = employees.map((employees) => employees.projects.flat()); // 直感でやるから分からない。
-console.log(maps);
+const abc = employees.map((employees) => employees.projects).flat(); // mapはemployeeのprojectsを取り出し、新しい配列を作る
+console.log(abc);
+
+console.log("-----------------実践課題7-------------------");
+
+// sortコピー作る
