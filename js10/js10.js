@@ -14,7 +14,13 @@ const employees = [
     department: "企画",
     projects: ["プロジェクトC"],
   },
-  { id: 3, name: "鈴木一郎", age: 28, department: "開発", projects: [] },
+  {
+    id: 3,
+    name: "鈴木一郎",
+    age: 28,
+    department: "開発",
+    projects: [],
+  },
 ];
 
 // チームごとの社員IDを管理する2次元配列
@@ -74,9 +80,37 @@ console.log(projects);
 
 console.log("-----------------実践課題3-1-------------------");
 console.log(Array.isArray([employees]));
-console.log("ここまだ出来ていない");
 
-console.log("-----------------実践課題3-2-------------------");
-const index = employees.id.findIndex((num) => num === 2);
+console.log("----実践課題4-1ここまだ出来ていない----");
 
-console.log(index);
+console.log("-----------------実践課題4-1-------------------");
+const index = employees.findIndex((employee) => employee.id === 2);
+console.log(index); // 1で正解かな？
+
+console.log("-----------------実践課題4-2-------------------");
+const suzuki = employees.find((employees) => employees.name >= "鈴木一郎"); // 上が正解ならこの当てはめ方であっているはず。
+console.log(suzuki);
+
+console.log("-----------------実践課題4-3-------------------");
+const sliced = employees.slice(0, 2);
+console.log(sliced); // これすんなり出来たの嬉しい
+
+console.log("-----------------実践課題4-4-------------------");
+const hasEigyo = employees.some((employees) =>
+  employees.department.includes("営業")
+);
+console.log(hasEigyo); // これも知識課題の例題のおかげですんなり出来た
+
+console.log("-----------------実践課題5-1-------------------");
+employees.push({ id: 4, name: "高橋次郎" });
+console.log(employees);
+
+console.log("-----------------実践課題5-2-------------------");
+employees.pop();
+console.log(employees);
+
+console.log("-----------------実践課題5-3-------------------");
+employees.unshift({ id: 5, name: "山本花子" });
+console.log(employees);
+
+console.log("-----------------実践課題5-4-------------------");
