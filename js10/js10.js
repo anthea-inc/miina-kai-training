@@ -97,8 +97,7 @@ console.log(sliced); // これすんなり出来たの嬉しい
 
 console.log("-----------------実践課題4-4-------------------");
 const hasEigyo = employees.some((employee) => employee.department === "営業");
-console.log(hasEigyo); // これも知識課題の例題のおかげですんなり出来た
-
+console.log(hasEigyo);
 console.log("-----------------実践課題5-1-------------------");
 employees.push(pushEmployee); //
 console.log(employees);
@@ -144,6 +143,32 @@ console.log("-----------------実践課題6-------------------");
 const abc = employees.map((employees) => employees.projects).flat(); // mapはemployeeのprojectsを取り出し、新しい配列を作る
 console.log(abc);
 
-console.log("-----------------実践課題7-------------------");
+console.log("-----------------実践課題7-1-------------------");
 
-// sortコピー作る
+employees.forEach((employee) => {
+  console.log(`社員名: ${employee.name}`);
+});
+
+console.log("-----------------実践課題7-2-------------------");
+const mapNames = employees.map((employee) => employee.name);
+console.log(mapNames);
+
+console.log("-----------------実践課題7-3-------------------");
+
+const Departments = employees.filter(
+  (employee) => employee.department === "企画"
+);
+console.log(Departments);
+console.log("-----------------実践課題7-4-------------------");
+
+const total = employees.reduce((sum, employee) => sum + employee.age, 0);
+
+const average = total / employees.length;
+
+console.log(average);
+
+console.log("-----------------実践課題7-5-------------------");
+const sorts = [...employees].sort((a, b) => b.age - a.age); // 降順にしている
+console.log(sorts);
+
+console.log("-----------------実践課題8-1-------------------");
