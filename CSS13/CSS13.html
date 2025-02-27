@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" href="CSS13.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div class="block">
+      block 占有幅全体を使用し、改行を発生させるから改行になっているはず
+    </div>
+    <a style="color: lightskyblue">私はインライン要素です</a>
+    <div class="inline">
+      inline
+      前後に改行をともなわず、他のインライン要素と横に並ぶ。幅高指定影響なし(指定中)
+    </div>
+    <span style="color: lightskyblue">僕もインライン要素です</span>
+
+    <div class="inline-block">
+      inline-block
+      インラインのように横並び,ブロック要素のように幅や高さを指定可能
+    </div>
+    <span style="color: lightskyblue">インライン要素です</span>
+
+    <p>none指定場所↓</p>
+    <div class="none">none 存在ごとない</div>
+    <p>none指定場所↑</p>
+    <div class="contents">contents 自分は表示されず、中の子要素だけが表示される
+      <div class="ko">親要素は背景色緑で、子要素は背景色赤
+    </div>
+    <fieldset>
+      <legend>inheritの試行錯誤</legend>
+    <div class="initial">initial第1:失敗
+      <div style="color:red">子要素は赤色指定だが、黒になってる予定。赤じゃん。なにこれ</div>
+    </div>
+    <div style="color: #004cff;">感想欄:pに色指定してからclass指定って事か？</div>
+   <p>これはpで、pの色は緑指定</p>
+   <p class="initial">子要素これは緑だが、initial指定で親要素の黒になる</p>
+     
+    </div>
+  </fieldset>
+ 
+
+    <div class="inherit">
+      <div class="ko2">子要素は紫で、親要素がオレンジ。になった！</div>
+    </div>
+
+    <div class="visible">visible</div>
+
+    <p>hidden指定場所↓</p>
+    <div class="hidden">hidden</div>
+    <p>hidden指定場所↑</p>
+    <p>hiddenとnone同じ高さ指定しています</p>
+  </body>
+</html>
