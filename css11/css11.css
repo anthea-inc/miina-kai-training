@@ -1,0 +1,15 @@
+.type {
+  list-style-type: circle;
+}
+
+.image {
+  list-style-image: url(icon.jpeg);
+}
+
+.position {
+  list-style-position: outside;
+}
+
+.style {
+  list-style: square inside url(2.jpeg);
+}
