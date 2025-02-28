@@ -97,7 +97,7 @@ console.log(sliced); // これすんなり出来たの嬉しい
 
 console.log("-----------------実践課題4-4-------------------");
 const hasEigyo = employees.some((employee) => employee.department === "営業");
-console.log(hasEigyo);
+console.log(hasEigyo); // 直ってない？
 console.log("-----------------実践課題5-1-------------------");
 employees.push(pushEmployee); //
 console.log(employees);
@@ -172,3 +172,22 @@ const sorts = [...employees].sort((a, b) => b.age - a.age); // 降順にして�
 console.log(sorts);
 
 console.log("-----------------実践課題8-1-------------------");
+
+const groupedByDepartment = employees.reduce((acc, employee) => {
+  // もし `acc`（蓄積オブジェクト）に部署がなければ、新しい配列を作るみたい
+  if (!acc[employee.department]) {
+    acc[employee.department] = [];
+  }
+  acc[employee.department].push(employee); // 部署ごとの配列に社員を追加
+
+  return acc;
+}, {}); // 初期値にする `{}`（空のオブジェクト）
+console.log(groupedByDepartment); // 自力でやっても無理だった
+
+console.log("-----------------実践課題8-2-------------------");
+const result = employees
+  .filter((employee) => employee.department === "営業")
+  .sort((a, b) => a.age - b.age)
+  .map((employee) => employee.name);
+
+console.log(result); // 営業1人しかいない
