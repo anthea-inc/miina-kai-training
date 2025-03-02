@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" href="css17.css" />
+
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <fieldset>
+      <div class="descendant">
+        <p>子孫結合子この段落適用されます。</p>
+        <div>
+          <p>この段落もスタイル適用</p>
+        </div>
+      </div>
+      <p>class外のここはスタイルが適用されない。</p>
+    </fieldset>
+
+    <fieldset>
+      <div class="child">
+        <a>子結合子だけ適応 </a>
+        <div>
+          <p>（孫要素）これは孫要素だから適応なし。</p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="ani">次兄弟結合子 これはclass指定</div>
+        <p>その隣だからこれだけ色変わる</p>
+      <p>隣の隣だから変わらない</p>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="subsequent">後続兄弟結合子</div>
+      <p>この後のもの</p>
+      <p>全部</p>
+      <p>反映する</p>
+    
+    </fieldset>
+    <fieldset>
+    <h1>セレクター</h1>
+    <h2>見出し全部</h2>
+    <h3>同じ指定</h3>
+    
+      
+    </fieldset>
+  </body>
+</html>
