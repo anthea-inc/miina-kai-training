@@ -1,0 +1,32 @@
+p::first-line {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+div::first-letter {
+  font-size: 2em;
+  color: blue;
+}
+
+a::before {
+  content: "問題：";
+  font-weight: bold;
+}
+
+span::after {
+  content: "(New!)";
+  color: purple;
+  font-weight: bold;
+}
+
+li::marker {
+  content: "✝ ";
+  font-size: 1.2em;
+}
+
+.selection {
+  &::selection {
+    color: red;
+    background-color: yellow;
+  }
+}
