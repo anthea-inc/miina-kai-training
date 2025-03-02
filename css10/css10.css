@@ -1,0 +1,30 @@
+.font-family {
+  font-family: monospace;
+}
+
+.generic-family {
+  font-family: "Arial Black", "Comic Sans MS", generic-family;
+}
+
+.web {
+  font-family: "Times New Roman";
+}
+
+.fallback {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.css {
+  font-style: italic;
+  font-weight: 600;
+
+  font-variant: normal;
+
+  font-size: 20px;
+}
+
+body {
+  font-family: "Rubik Vinyl", serif;
+  font-weight: 400;
+  font-style: normal;
+}
