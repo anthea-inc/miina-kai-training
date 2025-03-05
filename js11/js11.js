@@ -6,14 +6,15 @@ console.log("------------知識課題2------------");
 const str = "JavaScript";
 console.log(str[0]);
 console.log(str.at(0));
-console.log("------------知識課題3-1------------");
+console.log("------------知識課題3------------");
 const csv = "apple,banana,cherry";
-const fruits = csv.split(",");
-console.log(csv);
-console.log("------------知識課題3-2------------");
-const csv2 = "apple,banana,cherry";
+const fruits = csv.split(","); // これで配列に変換してる
 
-console.log(csv2.split);
+const mFruits = fruits.map((fruit) => "fruit: " + fruit);
+
+const result = mFruits.join(", "); // 文字列に戻す
+
+console.log(result);
 
 console.log("------------知識課題4------------");
 const text = "子持ち ししゃも!";
