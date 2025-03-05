@@ -10,7 +10,7 @@ console.log("------------知識課題3------------");
 const csv = "apple,banana,cherry";
 const fruits = csv.split(","); // これで配列に変換してる
 
-const mFruits = fruits.map((fruit) => "fruit: " + fruit);
+const mFruits = fruits.map((fruit) => "fruit: " + fruit); // map使うんだぁ、、、、
 
 const result = mFruits.join(", "); // 文字列に戻す
 
