@@ -20,3 +20,29 @@ console.log(sumNumbers());
 // デフォルト値が適用され、引数がないときは合計 0 になる
 
 console.log("------------実践課題3------------");
+
+const user = { name: "太郎", age: 20, email: "taro@example.com" };
+
+function abc({ name, age }) {
+  console.log(`名前: ${user.name}, 年齢: ${user.age}`);
+}
+
+abc(user);
+
+console.log("------------実践課題3-2------------");
+// 同様の処理をArrow Functionで定義した場合の書き方も作成してください。
+const user2 = { name: "太郎", age: 20, email: "taro@example.com" };
+const def = ({ name, age }) => {
+  console.log(`名前: ${name}, 年齢: ${age}`);
+};
+// =>付けただけになるけどいいのかな
+def(user2);
+// 出力: 名前: 太郎, 年齢: 20
+
+console.log("------------実践課題4------------");
+function processResult(value, callback) {
+  const result = callback(value); // 渡された関数 (callback) を実行
+  console.log("処理後の結果:", result); // 結果を出力
+}
+processResult("hello", (text) => text.toUpperCase());
+// 後深い理解必要
