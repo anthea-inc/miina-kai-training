@@ -1,6 +1,15 @@
-sayHello(); // ここで先に関数を呼び出している（本来はエラーになるはず？）
+function createCounter() {
+  let count = 0; // 外側の関数で定義した変数（プライベート）
 
-// ここで関数宣言
-function sayHello() {
-  console.log("こんにちは！");
+  return function () {
+    count++;
+    return count;
+  };
 }
+
+// クロージャーを利用した関数を作成
+const counter = createCounter();
+
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
