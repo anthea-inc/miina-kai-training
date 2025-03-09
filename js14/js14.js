@@ -59,3 +59,27 @@ const person = {
   name: "Taro",
   age: 25,
 };
+
+for (const key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
+
+// ① Object.entries(person).forEach((person) => console.log(person));せいはさん
+
+// ② for (const [key, value] of Object.entries(person)) {
+//   console.log(`${key}: ${value}`); //せいはさん
+// }
+
+console.log("--------------問題7---------------");
+//これ！なんだっけ！joinメゾット！！js11
+const words = ["I", " ", "love", " ", "JavaScript"];
+const abc2 = words.join("");
+console.log(abc2);
+
+console.log("--------------問題8---------------");
+const students = [
+  { name: "Taro", score: 80 },
+  { name: "Hanako", score: 95 },
+  { name: "Jiro", score: 70 },
+  { name: "Yoshiko", score: 85 },
+];
