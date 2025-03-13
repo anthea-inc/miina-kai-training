@@ -159,6 +159,37 @@ const data = [
   ["three", "support@example.com"],
 ];
 // const abc8 = data.flat(1);//え、違うの？
-// console.log(abc8);
 
-data.forEach((item) => console.log(item));
+// 念の為：forEach() は、配列の各要素に対して順番に処理を実行するメソッド
+data.forEach((item) => console.log(item)); // あ、console.logいらんもんな
+
+console.log("--------------問題18---------------");
+
+console.log(undefined == null);
+//true　なぜ？==（抽象的比較）」がundefinedとnullはお互いだけは等しいとみなされる！
+//  他の値（0, false, "" など）とは等しくないから注意。
+
+console.log("--------------問題19---------------");
+// 分割代入
+function getValues() {
+  return {
+    name: "John",
+    age: 30,
+    city: "New York",
+  };
+}
+const { name, age, city } = getValues();
+console.log(name);
+console.log(age);
+console.log(city);
+
+console.log("--------------問題20---------------");
+//　includes()（インクルーズ）かな？
+const hello = ["Hello, world! Hello, JavaScript!"];
+// const HelloSearch = "Hello, world! Hello, JavaScript!";
+// console.log(HelloSearch.includes("Hello"));
+const abc9 = hello.join(" ");
+console.log(abc9);
+console.log(abc9.includes("Hello")); //できたー！
+
+console.log("--------------問題21---------------");
