@@ -77,9 +77,88 @@ const abc2 = words.join("");
 console.log(abc2);
 
 console.log("--------------問題8---------------");
+// js10でやった気がするよなぁ
 const students = [
   { name: "Taro", score: 80 },
   { name: "Hanako", score: 95 },
   { name: "Jiro", score: 70 },
   { name: "Yoshiko", score: 85 },
 ];
+
+students.sort((a, b) => b.score - a.score);
+console.log(students);
+
+console.log("--------------問題9---------------");
+// ? constUP？習ってない？
+
+console.log("--------------問題10---------------");
+const months = ["jan", "feb", "mar", "apr", "may"];
+
+const abc3 = ["spring", "summer", "autumn", ...months.slice(3)];
+
+console.log(abc3);
+
+console.log("--------------問題11---------------");
+// わかる
+const array = ["apple", "banana", "cherry", "date", "elderberry"];
+const fruits = array.slice(2, 5);
+console.log(fruits);
+console.log(array);
+
+console.log("--------------問題12---------------");
+// array.lengthなんだ。
+const greetings = ["おはよう", "こんにちは", "こんばんは"];
+
+const abc5 = (array) => array[Math.floor(Math.random() * array.length)];
+
+console.log(abc5(greetings));
+
+console.log("--------------問題13---------------");
+//これ課題でやったけど、プルリクに出てこない。探し出せない！！！
+const letters = ["B", "a", "c", "e", "k"];
+// console.log(letters.sort());これは大文字順になる
+
+const abc6 = letters.sort((a, b) =>
+  a.toLowerCase().localeCompare(b.toLowerCase())
+); // sort() は配列を並び替える関数。2つの要素（a, b）を比較しながら並び順を決める。
+//  (a, b) => は、比較関数sort() に渡して並び替えのルールを決める。
+// a.toLowerCase() と b.toLowerCase() 大文字を小文字に変換
+// localeCompare() は、文字を比較して 「a が b より前なら -1」「後なら 1」「同じなら 0」 を返す。
+console.log(abc6);
+
+console.log("--------------問題14---------------");
+const num = Number("10"); // 文字列 '10' を数値に変換
+console.log(num); // 数値として出力
+console.log(typeof num); // 型の確認
+console.log(!isNaN(num)); // 数値であることを確認
+
+console.log("--------------問題15---------------");
+let numbers = ["2", "23", "0", "16"];
+
+const abc7 = numbers.sort((a, b) => a - b);
+console.log(abc7);
+Object.freeze(abc7);
+
+abc7[1] = 30; //2番目の要素を30に変えようとしてみよう
+console.log(abc7); // 動かないね
+
+console.log("--------------問題16---------------");
+let scores = [12, 5, 8, 130, 44];
+
+let allTen = scores.every((num) => num >= 10); // 全部10以上か
+console.log(allTen);
+
+let oneTen = scores.some((num) => num >= 10);
+console.log(oneTen); // 10以上の要素が1つでもあるか
+
+console.log("--------------問題17---------------");
+//なんか違う？[]が少ないから平坦化すればいいのかな？
+const data = [
+  ["one", "info@example.com"],
+  ["two", "hello@example.com"],
+  ["three", "support@example.com"],
+];
+// const abc8 = data.flat(1);//え、違うの？
+// console.log(abc8);
+
+data.forEach((item) => console.log(item));
