@@ -292,27 +292,12 @@ console.log("--------------！！！！問題32！！！！---------------");
 // indexOf() は、配列の中で特定の要素が何番目にあるか（インデックス）を取得
 
 const arrays = ["A", "B", "C", "D", "E"];
-const indexB = arrays.indexOf("B"); // 'B' のインデックス
-const indexE = arrays.indexOf("E"); // **削除前** の 'E' のインデックスを取得
 
-const [removed] = arrays.splice(indexB, 1); // 'B' を取り除く
+const indexE = arrays.indexOf("E");
+arrays.splice(indexE, 1);
 
-// 削除前の 'E' のインデックスを使って、'E' の前に 'B' を挿入
-arrays.splice(indexE - 1, 0, removed);
-
-console.log(arrays); // ['A', 'E', 'B', 'C', 'D']
-
-// const arrays = ["A", "B", "C", "D", "E"];
-// const indexB = arrays.indexOf("B"); // 'B' のインデックス
-// const indexE = arrays.indexOf("E"); // 'E' のインデックス
-
-// const [removed] = arrays.splice(indexB, 1); // Bを取り除く、配列が ["A", "C", "D", "E"] になる。
-
-// // 'E' の前に挿入 (削除後の 'E' のインデックスを取得)
-// const newIndexE = arrays.indexOf("E");
-// arrays.splice(newIndexE, 0, removed);
-
-// console.log(arrays); // [ 'A', 'C', 'D', 'B', 'E' ]
+arrays.splice(1, 0, "E");
+console.log(arrays);
 
 console.log("--------------問題33---------------");
 //hasOwnProperty:自身が持つプロパティのみ判定するので、継承されたプロパティをチェックしない。（自身が持つプロパティのみ判定）。
