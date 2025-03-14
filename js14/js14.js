@@ -193,3 +193,125 @@ console.log(abc9);
 console.log(abc9.includes("Hello")); //できたー！
 
 console.log("--------------問題21---------------");
+// リピート
+const str = "Hello";
+console.log(str.repeat(3));
+
+console.log("--------------問題22---------------");
+// split
+const abc10 = "JavaScript";
+const abc11 = abc10.split("");
+console.log(abc11);
+
+console.log("--------------問題23---------------");
+const str2 = "Anthropic"; // 分割代入
+const [char1, char2, ...rest] = str2; // 上の文字を1つずつ分解で
+// 左から順番に値を取り出す。char1は1文字目のA,char2は2文字目のn,...restは残りのすべて
+console.log(char1);
+console.log(char2);
+console.log(rest);
+
+console.log("--------------問題24---------------");
+//？
+
+console.log("--------------問題25---------------");
+arr1 = [1, 2, 3];
+arr2 = [4, 5, 6];
+
+// arr1.push(...arr2);後ろに追加してしまえば
+// console.log(arr1);//破壊的メゾットなんだよなぁ
+
+const Arr3 = [...arr1, ...arr2]; // 要素を展開し、新しい配列を作成
+console.log(Arr3);
+
+console.log("--------------問題26---------------");
+// console.logに文字列追加すればいいんだよね(テンプレートリテラル)
+function getMessage() {
+  return "Hello, JavaScript!";
+}
+
+console.log(`The message is: ${getMessage()}`); //${} の中に関数を書くことで、関数が実行され、その戻り値が埋め込まれる
+
+console.log("--------------問題27---------------");
+function addNumbers({ a, b }) {
+  // 関数の中身を実装してください
+  return a + b;
+}
+console.log(addNumbers({ a: 1, b: 2 }));
+
+console.log("--------------問題28---------------");
+const names = [
+  ["Alice", "Bob", "Charlie"],
+  ["David", "Eve", "Frank"],
+]; //  2次元配列（配列の中に配列がある状態）だから２重のmap()で対抗だ！
+const sun = names.map((row) => row.map((name) => name + "さん"));
+// 各要素（行 row）も配列であり、各 row の中に名前（name）が入っている
+// 外側のmap()：namesの各要素（配列 row）に対して処理。
+//内側のmap():row の各要素（name）に 'さん' を付ける。
+
+console.log(sun);
+
+console.log("--------------問題29---------------");
+//28と少し違う、同じ配列？かな
+const people = [{ name: "Alice" }, { name: "Bob" }];
+
+const newPeople = people.map((person) => person.name + "さん");
+
+console.log(newPeople);
+
+console.log("--------------問題30---------------");
+
+const data2 = [
+  ["apple", "banana"],
+  ["carrot", "durian"],
+];
+
+data2.forEach((subArray) => console.log(subArray[0]));
+// 	subArray には data2 の各サブ配列が代入.subArray[0] を取得し出力
+//最初の要素を取得
+
+console.log("--------------問題31---------------");
+//slice()
+const fruits2 = ["apple", "banana"];
+const copy = fruits2.slice(); // 配列をコピー
+
+fruits2.length = 0; // 元の配列を空にする
+fruits2.push("kiwi", "orange"); // 新しい要素
+
+console.log("copy:", copy);
+console.log("fruits:", fruits2);
+
+// const copy = fruits2; //これは 何も調べずに感覚で行った結果
+// const fruits3 = ["kiwi", "orange"];
+
+// console.log(copy);
+// console.log(fruits3);
+
+console.log("--------------！！！！問題32！！！！---------------");
+// splice()配列の要素を削除・追加・置き換えするメソッド
+// indexOf() は、配列の中で特定の要素が何番目にあるか（インデックス）を取得
+
+const arrays = ["A", "B", "C", "D", "E"];
+const indexB = arrays.indexOf("B"); // 'B' のインデックス
+const indexE = arrays.indexOf("E"); // **削除前** の 'E' のインデックスを取得
+
+const [removed] = arrays.splice(indexB, 1); // 'B' を取り除く
+
+// 削除前の 'E' のインデックスを使って、'E' の前に 'B' を挿入
+arrays.splice(indexE - 1, 0, removed);
+
+console.log(arrays); // ['A', 'E', 'B', 'C', 'D']
+
+// const arrays = ["A", "B", "C", "D", "E"];
+// const indexB = arrays.indexOf("B"); // 'B' のインデックス
+// const indexE = arrays.indexOf("E"); // 'E' のインデックス
+
+// const [removed] = arrays.splice(indexB, 1); // Bを取り除く、配列が ["A", "C", "D", "E"] になる。
+
+// // 'E' の前に挿入 (削除後の 'E' のインデックスを取得)
+// const newIndexE = arrays.indexOf("E");
+// arrays.splice(newIndexE, 0, removed);
+
+// console.log(arrays); // [ 'A', 'C', 'D', 'B', 'E' ]
+
+console.log("--------------問題33---------------");
