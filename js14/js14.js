@@ -315,3 +315,43 @@ console.log(arrays); // ['A', 'E', 'B', 'C', 'D']
 // console.log(arrays); // [ 'A', 'C', 'D', 'B', 'E' ]
 
 console.log("--------------問題33---------------");
+//hasOwnProperty:自身が持つプロパティのみ判定するので、継承されたプロパティをチェックしない。（自身が持つプロパティのみ判定）。
+
+const arr = [10, 20];
+console.log(arr.hasOwnProperty(2));
+
+console.log("--------------問題34---------------");
+const str3 = "-9";
+const num2 = Number(str3); // 数値（number）に変換
+console.log(num2);
+console.log(typeof num2);
+
+console.log("--------------問題35---------------");
+const greeting = "こんにちは";
+const name2 = "田中さん";
+
+const abc12 = `${greeting} ${name2}、いい天気ですね`; //()で囲んだら全部もじれつにな
+console.log(abc12);
+
+console.log("--------------問題36---------------");
+// 論理演算子 ||
+let target; // 事前に宣言
+console.log(target === null || target === undefined);
+
+console.log("--------------問題37---------------");
+let array2 = [];
+
+console.log(array2.length > 0);
+
+console.log("--------------問題38---------------");
+// || は 「左側が falsy（偽）」なら右側の値を使うという性質
+// ??（Nullish Coalescing Operator）を使う
+// ?? を使うと null または undefined のときだけ 10 を使う という処理ができ、左側が 0 や false なら → そのまま使う
+const value = 0;
+const target2 = value ?? 10; // 0はfalsy（偽）なので、10が代入される
+
+console.log(target2); //なるほどねぇ
+
+console.log("--------------問題39---------------");
+let obj = {};
+console.log(obj ? true : false);
