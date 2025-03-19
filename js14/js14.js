@@ -287,7 +287,7 @@ console.log("fruits:", fruits2);
 // console.log(copy);
 // console.log(fruits3);
 
-console.log("--------------！！！！問題32！！！！---------------");
+console.log("--------------問題32---------------");
 // splice()配列の要素を削除・追加・置き換えするメソッド
 // indexOf() は、配列の中で特定の要素が何番目にあるか（インデックス）を取得
 
@@ -338,5 +338,207 @@ const target2 = value ?? 10; // 0はfalsy（偽）なので、10が代入され�
 console.log(target2); //なるほどねぇ
 
 console.log("--------------問題39---------------");
-let obj = {};
-console.log(obj ? true : false);
+let obj = {}; // 空のオブジェクトだけどtrueとして評価
+// console.log(obj ? true : false);
+console.log(Object.keys(obj).length > 0 ? true : false);
+// プロパティが1つ以上ある場合は `true`、ない場合は `false`にする
+
+console.log("--------------問題40---------------");
+const fruits3 = ["apple", "banana", "orange"];
+console.log(fruits3.indexOf("orange"));
+
+console.log("--------------問題41---------------");
+
+const letters2 = ["a", "b", "c"];
+letters2[1] = "javascript"; // 1の要素を変える
+console.log(letters2);
+
+console.log("--------------問題42---------------");
+const numbers1 = [1, -2, 3, -4, 5];
+const abc13 = numbers1.filter((num) => num < 0); // num < 0 の要素だけ取得
+console.log(abc13);
+
+console.log("--------------問題43---------------");
+// const abc14 = data === null;
+// console.log(abc14);
+const datas = null; // dataの値は null
+console.log(datas === null); //こうゆうこと？
+
+console.log("--------------問題44---------------");
+
+const zeros = [0, 0, 0];
+
+// スプレッド構文で新しい配列を作成
+const abc15 = [...zeros];
+abc15.fill(7, 1); // インデックス1から最後まで7に変更
+
+console.log(abc15); // [0, 7, 7]
+
+console.log("--------------問題45---------------");
+const num3 = 3.14159;
+console.log(Math.trunc(num3));
+
+console.log("--------------問題46---------------");
+const obj2 = {
+  name3: "Taro",
+  age3: 25,
+};
+const { name3, age3 } = obj2; // すでに使われているから3つけた
+
+console.log(name3);
+console.log(age3);
+
+console.log("--------------問題47---------------");
+const str4 = "JavaScript";
+
+const firstChar = str4[0];
+const fifthChar = str4[4];
+
+console.log(firstChar); // 'J'
+console.log(fifthChar); // 'S'
+
+console.log("--------------問題48---------------");
+// フラット化/平坦化だflat()
+const nested = [1, [2, 3, 4], 5, [6, 7]];
+const flats = nested.flat();
+
+console.log(flats);
+
+console.log("--------------問題49---------------");
+// splitで区切って、他にもう1つどうやって繋げよう、、、
+const sentence = "The quick brown fox";
+const wordsObj = Object.fromEntries(
+  sentence.split(" ").map((word, index) => [index, word])
+); // `split()` で単語に分割し、`map()` で `[index, word]` のペアを作成するんだ
+console.log(wordsObj);
+
+console.log("--------------問題50---------------");
+// なんだ？
+//可変長引数を処理するみたい
+// 2つの引数 a と b を受け取り、その合計を返す
+function add(a = 1, b = 2) {
+  return a + b;
+}
+//	引数 a のデフォルト値が 1（何も渡されなかったとき a = 1 になる）
+// 引数 b のデフォルト値が 2（何も渡されなかったとき b = 2 になる）
+
+console.log(add()); // 3  (デフォルト値: 1 + 2)
+console.log(add(2)); // 4  (2 + デフォルト値 2)
+console.log(add(2, 3)); // 5  (2 + 3)
+
+console.log("--------------問題51---------------");
+const condition = true; // 変数 condition を true に設定。
+
+if (condition) {
+  doSomething();
+}
+
+condition && doSomething(); // && を使う
+
+function doSomething() {
+  console.log("実行");
+}
+//2回 “実行” が表示されるのは、if 文と && で doSomething(); を2回呼び出している
+
+console.log("--------------問題52---------------");
+
+const original = { name: "Taro", age: 25 };
+
+const copied = { ...original }; // 値渡し（コピー）で新しいオブジェクトを作成
+
+// originalのプロパティを変更してみる
+original.name = "Jiro";
+original.age = 30;
+
+// copied に影響がないか確認する
+console.log(original); // { name: "Jiro", age: 30 }
+console.log(copied); // { name: "Taro", age: 25 }（影響を受けない）
+
+console.log("--------------問題53---------------");
+
+const name4 = "Taro Yamada";
+const address = "Tokyo";
+
+const obj3 = {
+  name4, // ショートハンド
+  age: 30,
+  city: "Osaka",
+  address, // ショートハンド
+};
+console.log(obj3);
+
+console.log("--------------問題54---------------");
+//　これは簡単
+const nestedArray = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+const flat2 = nestedArray.flat();
+
+console.log(flat2);
+
+console.log("--------------問題55---------------");
+// 三項演算子を使わないんだ
+// const foo = a ? a : b;
+// const bar = c ? true : false;
+// const baz = c ? false : true;
+let a = "";
+let b = "B";
+let c = "C"; // 定義しないといけないのか？
+
+const foo = a || b; // aが真値（truthy）ならaを代入。そうでなければbを代入。
+const bar = !!c; // 変数cをboolean型に変換。!! は「二重否定」と呼ばれ、trueかfalseを明示的に作る。
+const baz = !c; // 変数cの真偽値を反転した値を代入。
+// 難しかった
+
+console.log(foo);
+console.log(bar);
+console.log(baz);
+
+console.log("--------------問題56---------------");
+// Setオブジェクト　重複を許さない特徴がある。
+const duplicatedArray = [1, 1, "a", "a", "b", "c", "c"];
+
+// Setを使って重複要素を除去して、新しい配列を作成しているんだ
+const uniqueArray = [...new Set(duplicatedArray)];
+
+console.log(uniqueArray);
+
+console.log("--------------問題57---------------");
+// 覚えてる！unshift配列の"先頭"に要素を"追加"
+const array3 = ["apple", "banana", "cherry"];
+array3.unshift("orange");
+console.log(array3);
+
+console.log("--------------問題58---------------");
+// .filter() メソッド
+
+const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const result = numbers2.filter((num) => num % 2 !== 0 && num % 3 !== 0);
+// 2で割り切れない → num % 2 !== 0
+// 3で割り切れない → num % 3 !== 0
+// これらを両方満たす必要があるため、論理AND演算子（&&）使う！
+console.log(result);
+
+console.log("--------------問題59---------------");
+// Object.valuesはオブジェクトの値（value）のみを取り出して配列にするメソッド
+const myObject = {
+  1: ["apple", "banana", "cherry"],
+  2: ["dog", "cat", "bird"],
+};
+
+const myArray = Object.values(myObject); // オブジェクトの値だけを取り出し、多次元配列に変換
+
+console.log("--------------問題60---------------");
+// Object.assign()
+const fruits4 = ["apple", "banana", "cherry"];
+
+// 配列をインデックスをキーとするオブジェクトに変換
+const abc16 = Object.assign({}, fruits4);
+//Object.assign({}, array) は、配列をインデックス番号をキーとしたオブジェクトに変換.
+//	配列の各要素はインデックスをキーにして新しいオブジェクトにコピー
+
+console.log(abc16);
+
+// 終わったーーーーーーーーー！！！！！！
