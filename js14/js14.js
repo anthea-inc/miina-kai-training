@@ -212,8 +212,20 @@ console.log(char2);
 console.log(rest);
 
 console.log("--------------問題24---------------");
-//？
+// 解説調べ済んでるのにコード書いてなかった
+// 問題の言葉じゃ意味わからんな、、
 
+// greet関数を定義
+function greet(first, second, ...rest) {
+  // first は第1引数を受け取り,second は第2引数を受け取り,...restは、3番目以降の引数をひとつの配列としてまとめて受け取りを指定している。
+  console.log("first:", first); //first に "Hello" が入る
+  console.log("second:", second); // second に "world" が入る
+  console.log("rest:", rest); // すべて配列 rest に格納される
+}
+
+// greet関数を呼び出し
+greet("Hello", "world", "!", "How", "are", "you", "?");
+//こんな感じで呼び出しできるの面白いよね
 console.log("--------------問題25---------------");
 arr1 = [1, 2, 3];
 arr2 = [4, 5, 6];
