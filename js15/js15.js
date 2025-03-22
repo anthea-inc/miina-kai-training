@@ -13,7 +13,7 @@ class User {
     this.age = age; // インスタンスのプロパティを初期化
     this.#password = password; // Privateフィールドを初期化
 
-    user.userCount++; // ユーザーが作られるたびにこれでカウントアップされる
+    this.userCount++; // ユーザーが作られるたびにこれでカウントアップされる
   }
 
   set password(newPassword) {
@@ -33,6 +33,7 @@ class User {
   }
 
   greet() {
+    console.log("ーーーーーーーーーーーーーーー", this);
     //  プロトタイプメソッド /greet()メソッド
     console.log(
       `こんにちは！ ${this.name} さん。年齢は ${this.age}歳ですね！ `
@@ -49,14 +50,19 @@ class AdminUser extends User {
     this.adminLevel = adminLevel; // 管理者レベルを設定
   }
   // 管理者専用メソッド（コンストラクタの外に書く！）
-  deleteUser(targetUser) {
-    console.log(
-      `管理者 ${this.name}（レベル${this.adminLevel}）が ${targetUser.name} を削除しました。`
-    );
+  deleteUser(user) {
+    console.log(user);
+    console.log(`${user.name} を削除しました。`);
   }
 }
 const user1 = new User("甲斐ミーナ", 22, "pass123");
+const user2 = new User("柘植", 31, "pass123");
+user1.greet();
+user2.greet();
+
 const admin = new AdminUser("管理者ミイナ", 30, "adminpass", 5);
+admin.deleteUser;
+admin.greet();
 // 名前定義してないから何も出ないんじゃね？え、インスタンス作っていいのかな
 
 // const user1 = new user("ミイナ", 22);
