@@ -13,7 +13,7 @@ class User {
     this.age = age; // インスタンスのプロパティを初期化
     this.#password = password; // Privateフィールドを初期化
 
-    this.userCount++; // ユーザーが作られるたびにこれでカウントアップされる
+    User.userCount++; // ユーザーが作られるたびにこれでカウントアップされる
   }
 
   set password(newPassword) {
@@ -63,6 +63,9 @@ user2.greet();
 const admin = new AdminUser("管理者ミイナ", 30, "adminpass", 5);
 admin.deleteUser;
 admin.greet();
+
+console.log(User.userCount); //作成されたユーザークラスの数を出力している。
+
 // 名前定義してないから何も出ないんじゃね？え、インスタンス作っていいのかな
 
 // const user1 = new user("ミイナ", 22);
