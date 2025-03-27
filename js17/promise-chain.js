@@ -16,6 +16,15 @@ function step2(input) {
   });
 } // resolveは成功って意味だよ
 
+function step3(input) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Step2 完了, 受け取ったデータ:", input);
+      resolve("データ2");
+    }, 1000);
+  });
+}
+
 console.log("Promiseチェーンを開始します...");
 
 step1()
@@ -23,7 +32,7 @@ step1()
     return step2(data1);
   })
 
-  .then((data3) => {
+  .then((data2) => {
     return step3(data2);
   })
 
