@@ -1,3 +1,4 @@
+// はじめに処理したものを提供
 const taskX = new Promise((resolve) =>
   setTimeout(() => resolve("Xが先に終わった！"), 500)
 );
