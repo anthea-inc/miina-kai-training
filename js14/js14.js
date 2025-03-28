@@ -89,7 +89,37 @@ students.sort((a, b) => b.score - a.score);
 console.log(students);
 
 console.log("--------------問題9---------------");
-// ? constUP？習ってない？
+// countUp（）
+// クロージャーを使用
+function createCounter() {
+  let count = 0;
+  return function countUp() {
+    count++;
+    return count;
+  };
+}
+
+const countUp = createCounter();
+
+console.log(countUp());
+console.log(countUp());
+console.log(countUp());
+console.log("");
+
+// 【組み込み関数とは？】
+// JavaScriptに最初から用意されている関数のこと
+
+// たとえば？
+// • console.log()
+// • Array.isArray()
+// • parseInt()
+// • setTimeout()
+// • Math.random()
+
+// 【ユーザー定義関数】
+// JavaScriptで自分で定義する関数のこと。
+// つまり「最初からあるもの（組み込み）」ではなく、開発者が目的に合わせて作る関数のこと！
+// さっき出てきたcountUp（）関数はこっちに該当します！
 
 console.log("--------------問題10---------------");
 const months = ["jan", "feb", "mar", "apr", "may"];
@@ -327,7 +357,7 @@ console.log("--------------問題35---------------");
 const greeting = "こんにちは";
 const name2 = "田中さん";
 
-const abc12 = `${greeting} ${name2}、いい天気ですね`; //()で囲んだら全部もじれつにな
+const abc12 = `${greeting} ${name2}いい天気ですね`; //()で囲んだら全部もじれつにな
 console.log(abc12);
 
 console.log("--------------問題36---------------");
@@ -368,7 +398,7 @@ console.log(letters2);
 console.log("--------------問題42---------------");
 const numbers1 = [1, -2, 3, -4, 5];
 const abc13 = numbers1.filter((num) => num < 0); // num < 0 の要素だけ取得
-console.log(abc13);
+console.log(abc13.join(", "));
 
 console.log("--------------問題43---------------");
 // const abc14 = data === null;
@@ -388,7 +418,8 @@ console.log(abc15); // [0, 7, 7]
 
 console.log("--------------問題45---------------");
 const num3 = 3.14159;
-console.log(Math.trunc(num3));
+console.log(Math.round(num3)); // エクセルの関数と同じだ、、、！！！！！！！！
+// round,roundupもdownもあったもんなぁなるほどね、、！
 
 console.log("--------------問題46---------------");
 const obj2 = {
@@ -541,6 +572,7 @@ const myObject = {
 };
 
 const myArray = Object.values(myObject); // オブジェクトの値だけを取り出し、多次元配列に変換
+console.log(myArray);
 
 console.log("--------------問題60---------------");
 // Object.assign()
