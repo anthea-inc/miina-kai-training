@@ -71,3 +71,5 @@ Vite プロジェクト作成:npm create vite@latest
 パッケージインストール:npm install
 開発サーバー起動:npm run dev
 ブラウザで確認:http://localhost:5173
+
+毎回 npm run dev 必要
