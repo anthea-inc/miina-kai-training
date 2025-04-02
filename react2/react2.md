@@ -100,9 +100,9 @@ function Greeting() {
 const isLoggedIn = true;
 
 if (isLoggedIn) {
-return <p>ようこそ、ユーザーさん！</p>;
+return < p>ようこそ、ユーザーさん！< /p>;
 } else {
-return <p>ログインしてください。</p>;
+return < p>ログインしてください。< /p>;
 }
 }
 
@@ -111,8 +111,7 @@ function Greeting() {
 const isLoggedIn = true;
 
 return (
-
-<p>{isLoggedIn ? "ようこそ、ユーザーさん！" : "ログインしてください。"}</p>
+< p>{isLoggedIn ? "ようこそ、ユーザーさん！" : "ログインしてください。"} /p>
 );
 }
 
@@ -121,9 +120,8 @@ function Greeting() {
 const isLoggedIn = true;
 
 return (
-
-<div>
-{isLoggedIn && <p>ログイン済みです ✅</p>}
-</div>
+< div>
+{isLoggedIn && < p>ログイン済みです < /p>}
+< /div>
 );
 }
