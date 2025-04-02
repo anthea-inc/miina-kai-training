@@ -1,20 +1,11 @@
-import Greeting from "./Greeting";
-import Layout from "./Layout";
+import UserInfo from "./UserInfo";
 
 function App() {
   return (
     <>
-      {/* Welcome メッセージを Layout でラップ */}
-      <Layout>
-        <h2>Welcome!</h2>
-        <p>This is a sample page.</p>
-      </Layout>
-
-      {/* Greeting コンポーネントを Layout でラップ */}
-      <Layout>
-        <Greeting name="Anthea" />
-        <Greeting name="Antheia" />
-      </Layout>
+      <h2>ログイン状態チェック</h2>
+      <UserInfo isLoggedIn={true} />
+      <UserInfo isLoggedIn={false} />
     </>
   );
 }
