@@ -15,15 +15,33 @@
 
 //実践課題2
 
+// import React from "react";
+// import CounterWithTitle from "./CounterWithTitle";
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>課題2 useEffectでタイトル更新</h1>
+//       <CounterWithTitle />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//実践課題3
 import React from "react";
-import CounterWithTitle from "./CounterWithTitle";
+import ThemeContext from "./ThemeContext";
+import ThemeDisplay from "./ThemeDisplay";
 
 function App() {
   return (
-    <div>
-      <h1>課題2 useEffectでタイトル更新</h1>
-      <CounterWithTitle />
-    </div>
+    <ThemeContext.Provider value="dark">
+      <div>
+        <h1>Context使ってみよう！</h1>
+        <ThemeDisplay />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
