@@ -55,3 +55,5 @@ return < input ref={inputRef} />;
 //実際に描画する input 要素
 // ref={inputRef} によって、この DOM 要素を inputRef にひも付けている。
 //こうすることで、React がこの < input> を描画したあと、inputRef.current にその要素が自動で入るようになる。
+
+課題時間 1h〜1.5h
