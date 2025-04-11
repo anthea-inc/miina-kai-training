@@ -264,3 +264,6 @@ useEffect(() => {
 fetch(API_URL);
 // eslint-disable-next-line react-hooks/exhaustive-deps
 }, []); // ← API_URL は変化しないので依存不要
+
+課題時間 5〜6h？
+細かく issue の返信等を挟んで行なっていたので明確な時間が分かりません
