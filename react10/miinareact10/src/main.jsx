@@ -1,10 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import "../panda.css";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import React from "react";
+import Card from "./components/Card";
+
+function App() {
+  return (
+    <div style={{ padding: "2rem" }}>
+      <h1>カードテスト</h1>
+      <Card title="お知らせ">
+        <p>これはカードの本文です。</p>
+      </Card>
+    </div>
+  );
+}
+
+export default App;
