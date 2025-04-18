@@ -30,4 +30,4 @@ Headless Component Library:少し高い（自分でスタイルを考える必�
 従来の UI コンポーネントライブラリ:一部カスタマイズは可能
 Headless Component Library:フルカスタマイズ前提なので柔軟性が高い
 
-時間 3.5h 程
+時間 4.5h 程
