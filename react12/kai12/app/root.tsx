@@ -5,16 +5,22 @@ import {
   Scripts,
   ScrollRestoration,
   isRouteErrorResponse,
+  redirect,
 } from "react-router";
 import type { Route } from "./+types/root";
 import appStylesHref from "./app.css?url";
-
 import { getContacts } from "./data";
+import { createEmptyContact } from "./data";
 
 // export async function clientLoader() {
 //   const contacts = await getContacts();
 //   return { contacts };
 // }
+
+export async function action() {
+  const contact = await createEmptyContact();
+  return redirect(`/contacts/${contact.id}/edit`);
+}
 
 export default function App() {
   return <Outlet />;
