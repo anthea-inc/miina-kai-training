@@ -81,6 +81,7 @@ TypeScript/Hono/Drizzle ORM  React/React Router/TanStack Query/TanStack Form Pos
 #### 担当業務
 
 フロントエンド開発: HTML/CSS/TypeScriptを用いたPC・スマートフォン版LPの実装。
+
 UI/UXデザイン: Figmaを用いたスマートフォン版LPのUI/UXデザイン、およびデザインシステムの策定。
 
 #### 取り組んだこと
