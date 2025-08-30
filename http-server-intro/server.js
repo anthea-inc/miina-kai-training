@@ -1,20 +1,20 @@
 import http from "http";
 
-const server = http.createServer((req, res) => {
-  const headers = {
-    "Content-Type": "text/plain",
-  };
+// ユーザーのリストを定義
+const userList = [
+  { id: 1, name: "Alice", county: "USA", age: 19 },
+  { id: 2, name: "Bob", county: "Canada", age: 25 },
+  { id: 3, name: "Ken", county: "Japan", age: 22 },
+];
 
-  // リクエストのメソッドによって処理を分岐
-  if (req.method === "GET") {
+const server = http.createServer((req, res) => {
+  if (req.url === "/" && req.method === "GET") {
     res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Hello, World!\n");
-  } else if (req.method === "POST") {
-    res.writeHead(200, headers);
-    res.end("Received POST reqest\n");
-  } else {
-    res.writeHead(404, headers);
-    res.end("404 Not Found\n");
+    res.end("Hello, World!\nAccess to /users to get user data!");
+  }
+  if (req.url === "/users" && req.method === "GET") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(userList));
   }
 });
 
