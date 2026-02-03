@@ -1,0 +1,11 @@
+h1 {
+  font-size: calc(1.5rem + 3vw);
+}
+.max {
+  width: max(300px, 50%);
+  background-color: lightblue;
+}
+.min {
+  width: min(400px, 40%);
+  background-color: lightgreen;
+}
